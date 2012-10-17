@@ -1,0 +1,65 @@
+
+<!-- saved from url=(0037)http://s.xvideos.com/footer-blanc.php -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<!-- base href="http://s.xvideos.com/footer-blanc.php" -->
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #ffffff;
+}
+-->
+</style>
+
+<title>xvideos white footer ads</title><script type="text/javascript" async="" src="display(1)"></script></head>
+
+<body>
+
+<script type="text/javascript">
+var xpn_site_id = 1;
+var xpn_zone_ids = {
+  'wpn-footer': 2
+};
+
+(function() {
+  var old_onload = window.onload;
+  window.onload = function() {
+    if (old_onload)
+      old_onload();
+
+    var zids = [];
+    for (var id in xpn_zone_ids)
+      if (xpn_zone_ids.hasOwnProperty(id))
+        zids.push(xpn_zone_ids[id]);
+    if (!zids.length)
+      return;
+
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = 'true';
+    s.src = 'http://rpc.trafficfactory.biz/display?site=' + xpn_site_id + '&cat=&zones=' + zids.join(',') + '&jsonp=xpn';
+    document.getElementsByTagName('head')[0].appendChild(s);
+  }
+})();
+
+function xpn(data) {
+  var banners = data;
+  for (var id in xpn_zone_ids)
+    if (xpn_zone_ids.hasOwnProperty(id))
+      for (var i = 0; i < banners.length; i++)
+        if (banners[i].zone_id == xpn_zone_ids[id]) {
+          document.getElementById(id).innerHTML = banners[i].code;
+          banners.splice(i, 1);
+          break;
+        }
+}
+</script>
+
+<div id="wpn-footer"><a target="_blank" href="http://rpc.trafficfactory.biz/delivery?data=eyJiYW5uZXJfaWQiOjEyMjgwLCJiYW5uZXJfbmFtZSI6IkxQIiwiYmFubmVyX3R5cGUiOjEsImNhbXBhaWduX2lkIjoyLCJjaGFubmVsX2lkIjoxLCJ6b25lX2lkIjoyLCJ1c2VyX2lkIjoxLCJ1cmwiOiJodHRwOi8vbGVnYWxwb3Juby5jb20vIiwiYmlkIjoiMC4xRS0xIiwicm9uIjoxLCJsYW5ndWFnZSI6ImphIiwiY291bnRyeSI6IkpQTiIsImJyb3dzZXIiOiJjaHJvbWUiLCJvcyI6Im1hY2ludG9zaCIsInVzZXJhZ2VudCI6Ik1vemlsbGEvNS4wIChNYWNpbnRvc2g7IEludGVsIE1hYyBPUyBYIDEwXzdfNSkgQXBwbGVXZWJLaXQvNTM3LjQgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMjIuMC4xMjI5Ljk0IFNhZmFyaS81MzcuNCIsInJlZmVycmVyIjoiaHR0cDovL3MueHZpZGVvcy5jb20vZm9vdGVyLWJsYW5jLnBocCIsImlwIjoiMTgwLjUzLjE2NS4yNTIiLCJkaXNwbGF5X3RpbWUiOjEzNTA0NzcxMTl9&hmac=9d-KD_mAtNMzoeUFkEDlMIyazRM="><img src="68a473c77c10e96c.jpg"></a></div>
+
+
+
+</body></html>
