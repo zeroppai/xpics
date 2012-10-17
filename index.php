@@ -6,7 +6,7 @@ include('functions.php');
 execute();
 
 function defaultAction(){
-	$items = getImageItems();
+	$items = getImageItemsFromBeluga();
 	include('inc_index.php');
 }
 function sampleAction(){

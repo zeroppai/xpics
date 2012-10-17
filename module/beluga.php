@@ -18,10 +18,11 @@ class Beluga {
 		return count($this->home()) >0;
 	}
 
-	function home($since_id='0'){
+	function home($since_id='0',$max_id=''){
 		$url = 'http://api.beluga.fm/1/statuses/home?app_id='.$this->app_id
 				.'&app_secret='.$this->app_secret.'&user_id='.$this->user_id.'&user_token='.$this->user_token
 				.'&since_id='.$since_id;
+		if($max_id) $url .= '&max_id='.$max_id;
 		return json_decode(@file_get_contents($url),true);
 	}
 
