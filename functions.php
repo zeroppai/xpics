@@ -23,7 +23,7 @@ function getImageItemsFromBeluga($since_id='0',$max_id='',$count=0){
 		$max_id = $timeline['id'];
 	}
 	if($count+$i<50){
-		$items = array_merge($items,getImageItems($since_id,$max_id,$count+$i));
+		$items = array_merge($items,getImageItemsFromBeluga($since_id,$max_id,$count+$i));
 	}
 	return $items;
 }

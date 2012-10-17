@@ -9,6 +9,8 @@ function defaultAction(){
 	$items = getImageItemsFromBeluga();
 	include('inc_index.php');
 }
-function sampleAction(){
 
+function setupAction(){
+	header('Content-type:text');
+	echo file_get_contents('setup/mysql.sql');
 }
