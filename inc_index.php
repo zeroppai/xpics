@@ -11,7 +11,7 @@
   <link rel="search" type="application/opensearchdescription+xml" title="XPicts" href="http://beluga.fm">
   <link rel="shortcut icon" href="http://static.xvideos.com/img/favicon_xvideos.ico">
 
-  <link rel="stylesheet" href="http://static.xvideos.com/v2/css/xv-styles.css?v=8">
+  <link rel="stylesheet" href="./js/xv-styles.css">
   <script src="./js/modernizr-2.5.3.min.js"></script>
   <script src="./js/script-head.js"></script>
   <script src="./js/mobile.js"></script>
