@@ -34,14 +34,12 @@
       </div>
       
       <div class="redStripe clearfix" id="mainMenu">
-        <p>3000+ PORN VIDEOS / DAY</p>
+        <p>YOUR UPLOAD / DAY</p>
         <ul>
-          <li><a href="http://www.xvideos.com/best/">Best Videos</a></li>
-          <li><a href="http://www.xvideos.com/hits/">Hits</a></li>
-          <li><a href="http://www.xvideos.com/profiles">Profiles</a></li>
-          <li><a href="http://www.xvideos.com/tags/">Tags</a></li>
-          <li><a href="http://forum.xnxx.com/">Forum</a></li>
-          <li><a href="http://multi.xnxx.com/">Porn Pics</a></li>
+          <li><a href="#">Best Pictures</a></li>
+          <li><a href="#">Hits</a></li>
+          <li><a href="#">Tags</a></li>
+          <li><a href="#">Archives</a></li>
         </ul>
       </div>
       
@@ -50,13 +48,13 @@
           <a href="http://upload.xvideos.com/account/create"><b>Create account</b></a> | <a href="http://upload.xvideos.com/account"><b>Log in</b></a>
         </p>
         <ul>
-          <li><strong><a href="http://www.xvideos.com/c/Amateur-17">Real Amateur Porn Videos</a></strong></li>
+          <li><strong><a href="#">Real Amateur Porn Pictures</a></strong></li>
           <li>||</li>
-          <li><a href="http://www.xvideos.com/best/day/">Best Of Today</a></li>
+          <li><a href="#">Best Of Today</a></li>
           <li>|</li>
-          <li><a href="http://www.xvideos.com/best/week/">Best Of 7 Days</a></li>
+          <li><a href="#">Best Of 7 Days</a></li>
           <li>|</li>
-          <li><a href="http://www.xvideos.com/best/month/">Best Of 30 Days</a></li>
+          <li><a href="#">Best Of 30 Days</a></li>
           <li>|</li>
         </ul>
       </div>
@@ -72,8 +70,7 @@
       </div> <!-- #ads -->
       
       <div class="redStripe">
-        <div class="showMore"><a href="http://www.xvideos.com/new/1/">2,235,087 more &gt;&gt;&gt;</a></div>
-        <strong>NEW VIDEOS</strong> - This page is updated every ~10 minutes with new porn videos!
+        <strong>NEW PICTURES</strong> - These pictures are uploaded from beluga.fm.
       </div>
       
       <div id="content">
