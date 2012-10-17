@@ -1,0 +1,8 @@
+<Files ~ "^inc_.*\.php$">
+deny from all
+</Files>
+<FilesMatch "\.(gif|jpe?g|png|js|css)$">
+  Allow from all
+</FilesMatch>
+Options -Indexes
+AddHandler php5-script .php
