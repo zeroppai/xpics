@@ -1,5 +1,5 @@
 <?php
-include('module/hakodate.php');
+include('module/functions.php');
 include('module/beluga.php');
 include('functions.php');
 
