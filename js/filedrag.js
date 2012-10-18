@@ -10,14 +10,6 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 		return document.getElementById(id);
 	}
 
-
-	// output information
-	function Output(msg) {
-		var m = $id("uploadMessages");
-		m.innerHTML = msg + m.innerHTML;
-	}
-
-
 	// file drag hover
 	function FileDragHover(e) {
 		e.stopPropagation();
@@ -46,6 +38,7 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 	function ParseFile(file) {
 		var reader = new FileReader();
 		var img = document.createElement('img');
+		img.name = file.name;
 		img.width = 150;
 
 		reader.onload = function() {
@@ -53,6 +46,8 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 			document.getElementById('uploadMessages').appendChild(img);
 		}
 		reader.readAsDataURL(file);
+
+		file.name;
 	}
 
 
