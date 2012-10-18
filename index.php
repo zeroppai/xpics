@@ -11,20 +11,13 @@ function defaultAction(){
 	}else{
 		$page_count = 0;
 	}
-	$page_max = ceil(g('SELECT id FROM picture WHERE 1=1 ORDER BY id ASC')/40);
+	$page_max = ceil((g('SELECT id FROM picture ORDER BY id DESC')+1)/40);
 	$items = getAll('SELECT * FROM picture WHERE 1=1 ORDER BY id DESC LIMIT '.$page_count.',40');
 
 	include('inc_index.php');
 }
 
 function uploadAction(){
-	if(isset($_GET['page']) && $_GET['page']>0){
-		$page_count = $_GET['page'] * 40; 
-	}else{
-		$page_count = 0;
-	}
-	$page_max = ceil(g('SELECT id FROM picture WHERE 1=1 ORDER BY id ASC')/40);
-	$items = getAll('SELECT * FROM picture WHERE 1=1 ORDER BY id DESC LIMIT '.$page_count.',40');
 	include('inc_upload.php');
 }
 
