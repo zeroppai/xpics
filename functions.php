@@ -41,11 +41,12 @@ function dispHeader(){
   <meta name="keywords" content="xpicts,xpicts.net, x pictures,x picture,porn,picture,pictures,">
   <meta name="description" content="XPICTS Free Porn Images free">
   
-  <link rel="search" type="application/opensearchdescription+xml" title="XPicts" href="http://beluga.fm">
-  <link rel="shortcut icon" href="http://static.xvideos.com/img/favicon_xvideos.ico">
-  <link rel="stylesheet" href="./js/xv-styles.css">
-  <link rel="stylesheet" href="./js/xv-account-styles.css">
-  <link rel="stylesheet" type="text/css" media="all" href="html5_styles.css" />
+  <link rel="search" type="application/opensearchdescription+xml" title="XPicts" href="http://beluga.fm"/>
+  <link rel="shortcut icon" href="http://static.xvideos.com/img/favicon_xvideos.ico"/>
+  <link rel="stylesheet" href="./js/xv-styles.css"/>
+  <link rel="stylesheet" href="./js/xv-account-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="all" href="./js/html5_styles.css" />
+
   <script src="./js/modernizr-2.5.3.min.js"></script>
   <script src="./js/script-head.js"></script>
   <script src="./js/mobile.js"></script>
@@ -106,7 +107,6 @@ function dispFooter(){
     </div>
     
     <footer>
-    <?if(isset($_GET['action']) && $_GET['action']!=='upload'){?>
       <div class="terms">
         <p>
           XPicts.net is a <strong>free hosting service for porn picts</strong>.
@@ -116,7 +116,6 @@ function dispFooter(){
           <a href="http://beluga.fm/room/85V9p+nfRr51E">【18禁】エロ画像を貼るアレ</a> ...
         </div>
       </div>
-    <?}?>
       <p class="slogan">XPicts.com - the best free porn videos on internet, 100% free.</p>
     </footer>
     

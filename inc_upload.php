@@ -5,7 +5,7 @@ dispHeader();
 
 
     <div id="content" class="signInUp">
-      <h2 class="blackTitle">Login to your xvideos.com account</h2>
+      <h2 class="blackTitle">Upload your pictures</h2>
 
       <form method="POST" id="signinForm">
         <div class="rightCol">
@@ -22,53 +22,36 @@ dispHeader();
             </div>
           </div>
         </div>
-
-        <div class="formFields">
-          <input type="hidden" name="referer" value="http://info.xvideos.com/">
-            <div class="formFields">
-              <div class="formLine email" style="position: relative; overflow: visible; ">
-                <label for="email_text">Your login (email):</label>
-                <div class="content">
-                  <input name="login" id="email_text" type="text" value="" data-validation="{&quot;parent&quot;:&quot;.formLine&quot;,&quot;events&quot;:[&quot;keyup&quot;,&quot;blur&quot;],&quot;rules&quot;:[{&quot;name&quot;:&quot;notblank&quot;},{&quot;name&quot;:&quot;email&quot;}]}">
-                </div>
-              <div class="formTooltip" style="left: 416px; top: 2px; display: none; "><div class="arrow"></div><div class="text">Test</div></div></div>
-              <div class="formLine password" style="position: relative; overflow: visible; ">
-            <label for="password_text">Password:</label>
-            <div class="content">
-              <input name="password" id="password_text" type="password" data-validation="{&quot;parent&quot;:&quot;.formLine&quot;,&quot;rules&quot;:[{&quot;name&quot;:&quot;min&quot;,&quot;min&quot;:5}]}">
-            </div>
-            <div class="formTooltip" style="left: 416px; top: 2px; display: none; "><div class="arrow"></div><div class="text">Test</div></div></div>
-            <div class="formLine rememberme">
-            <div class="content">
-              <span>
-                <input name="rememberme" id="rememberme_checkbox" type="checkbox">
-                <label for="rememberme_checkbox">Remember me on this computer</label>
-              </span>
-            </div>
-          </div>
-            </div>
-          <div class="formActions center">
-            <p><input type="submit" value="Login to your account" name="log"></p>
-            <p><a href="/account/lostpassword">Forgot your password ?</a></p>
-          </div>    
-        </div>
       </form>
 
-  </div>
+      <form id="upload" action="index.html" method="POST" enctype="multipart/form-data">
+        <fieldset>
+          <legend>File Upload</legend>
+
+          <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+
+          <div>
+            <label for="fileselect">Files to upload:</label>
+            <input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+            <div id="filedrag">or drop files here</div>
+          </div>
+
+          <div id="submitbutton">
+            <button type="submit">Upload Files</button>
+          </div>
+
+        </fieldset>
+      </form>
+
+      <div id="uploadMessages">
+        Status Messages
+      </div>
+    </div>
 
 
     </div> <!-- #main -->
 
-    <div id="categories" class="pagination lighter">
-      <ul>
-        <li><a href="#"> muridana</a></li>
-        <li><a href="#"> asd</a></li>
-        <li><a href="#"> gagaga</a></li>
-        <li><a href="#"> oppai</a></li>
-        <li><a href="#"> homo</a></li>
-      </ul>
-    </div> <!-- #categories -->
-    
+<script src="./js/filedrag.js"></script>
 <?
 dispFooter();
 ?>
