@@ -28,6 +28,15 @@ function uploadAction(){
 	include('inc_upload.php');
 }
 
+function uploadImageAction(){
+	put('picture',array(
+		'title'=>$_POST['image']['name'],
+		'thumbnail_url'=>$_POST['links']['small_square'],
+		'image_url'=>$_POST['links']['original'],
+		'rate'=>'1'
+	));
+}
+
 function setupAction(){
 	header('Content-type:text');
 	echo file_get_contents('setup/mysql.sql');

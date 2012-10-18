@@ -10,7 +10,7 @@ function uplaodToImgurl(data){
 		data:data,
 		success:function(msg){
 			$('#uploadMessages').html('<strong>アップロードに成功しました。</strong>');
-			console.log(msg);
+			registImage(msg);
 		},
 		error:function(msg){
 			$('#uploadMessages').html('<strong>アップロードに失敗しました。</strong>');
@@ -19,8 +19,23 @@ function uplaodToImgurl(data){
 	 });
 }
 
+function registImage(data){
+	$.ajax({
+		type:'POST',
+		url:'./index.php?action=uploadImage',
+		data:data.upload,
+		success:function(msg){
+			console.log(msg);
+		},
+		error:function(msg){
+			$('#uploadMessages').html('<strong>registerに失敗しました。</strong>');
+			console.log(msg);
+		}
+	});
+}
+
 $('#uploadButton').click(function(){
-	$('#uploadMessages').children().each(function(){
+	$('#uploadMessages').children('img').each(function(){
 		var data = {
 			name:$(this).attr('name'),
 			key:dev_key,
