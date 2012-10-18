@@ -39,20 +39,20 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 		for (var i = 0, f; f = files[i]; i++) {
 			ParseFile(f);
 		}
-
 	}
 
 
 	// output file information
 	function ParseFile(file) {
-		console.log(file);
-		Output(
-			"<p>File information: <strong>" + file.name +
-			"</strong> type: <strong>" + file.type +
-			"</strong> size: <strong>" + file.size +
-			"</strong> bytes</p>"
-		);
+		var reader = new FileReader();
+		var img = document.createElement('img');
+		img.width = 150;
 
+		reader.onload = function() {
+			img.src = reader.result;  // 読み込んだ画像データをsrcにセット
+			document.getElementById('uploadMessages').appendChild(img);
+		}
+		reader.readAsDataURL(file);
 	}
 
 

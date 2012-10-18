@@ -43,9 +43,7 @@ dispHeader();
         </fieldset>
       </form>
 
-      <div id="uploadMessages">
-        Status Messages
-      </div>
+      <div id="uploadMessages"></div>
     </div>
 
 
