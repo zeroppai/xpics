@@ -26,7 +26,7 @@ dispHeader();
 
       <form id="upload" method="POST" enctype="multipart/form-data">
         <fieldset>
-          <legend>File Upload</legend>
+          <legend>File Upload（同時に大量にアップロードすると失敗することがあります）</legend>
 
           <input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
 
