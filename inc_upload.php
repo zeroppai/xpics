@@ -24,7 +24,7 @@ dispHeader();
         </div>
       </form>
 
-      <form id="upload" action="index.html" method="POST" enctype="multipart/form-data">
+      <form id="upload" method="POST" enctype="multipart/form-data">
         <fieldset>
           <legend>File Upload</legend>
 
@@ -37,7 +37,7 @@ dispHeader();
           </div>
 
           <div id="submitbutton">
-            <button type="submit">Upload Files</button>
+            <button type="button" id="uploadButton">Upload Files</button>
           </div>
 
         </fieldset>
@@ -49,6 +49,7 @@ dispHeader();
 
     </div> <!-- #main -->
 
+<script src="./js/upload.js"></script>
 <script src="./js/filedrag.js"></script>
 <?
 dispFooter();

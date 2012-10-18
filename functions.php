@@ -47,6 +47,9 @@ function dispHeader(){
   <link rel="stylesheet" href="./js/xv-account-styles.css"/>
   <link rel="stylesheet" type="text/css" media="all" href="./js/html5_styles.css" />
 
+  <script src="./js/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="http://static.xvideos.com/v2/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
   <script src="./js/modernizr-2.5.3.min.js"></script>
   <script src="./js/script-head.js"></script>
   <script src="./js/mobile.js"></script>
@@ -120,12 +123,6 @@ function dispFooter(){
     </footer>
     
   </div> <!-- #page  -->
-
-  <script src="./js/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="http://static.xvideos.com/v2/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
- <!--
- <script type="text/javascript" src="./js/script.js"></script>  
-   -->
 </body></html>
 <?
 }

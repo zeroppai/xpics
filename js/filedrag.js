@@ -31,6 +31,7 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 		for (var i = 0, f; f = files[i]; i++) {
 			ParseFile(f);
 		}
+		submitbutton.style.display = 'block';
 	}
 
 
