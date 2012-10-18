@@ -1,0 +1,640 @@
+/* =============================================================================
+   STYLES FOR ACCOUNT PAGES
+============================================================================= */
+
+/* ==== USER ADMIN ==== */
+#main.pageAccount #content {
+	margin-left: 220px;
+	margin-right: -930px;
+	width: 710px;
+}
+#userAdminLeftPanel {
+	width: 200px;
+	float: left;
+	margin: 0 -200px 0 0;
+	overflow: hidden;
+}
+.adminBox {
+	padding: 0;
+	margin: 0 0 20px 0;
+	border: 1px solid #918e8c;
+}
+.adminBox h2,
+.adminBox h3 {
+	margin: 0;
+	padding: 0 3px;
+	background: #EBE9DA;
+    border-bottom: 2px solid #DCDACB;
+	text-align: center;
+	font-weight: bold;
+	line-height: 24px;
+}
+.adminBox h2 { font-size: 14px; }
+.adminBox h3 { font-size: 13px; }
+.adminBox .contentbox {
+	padding: 10px;
+	font-size: 13px;
+	line-height: 20px;
+}
+#userAdminLeftPanel .adminBox .contentbox {
+	padding: 8px 10px;
+	line-height: 24px;
+}
+#userAdminLeftPanel .adminBox a.sel,
+#userAdminLeftPanel .adminBox a.redText { font-weight: bold; }
+.adminBox .contentbox h4 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 16px;
+	margin: 10px 0;
+}
+.adminBox .contentbox p.sectionLink {
+	font-size: 14px;
+	font-weight: bold;
+	padding: 0 10px;
+}
+
+#main .redStripe.adminMsg {
+	margin-bottom: 2px;
+	padding: 4px 10px;
+	margin-left: 220px;
+	margin-right: -930px;
+	width: 690px;
+	text-align: center;
+}
+#main .redStripe.adminMsg h4 {
+	margin-bottom: 4px;
+	font-size: 15px;
+	font-weight: bold;
+}
+#main .redStripe.adminMsg p {
+	font-size: 13px;
+}
+
+p.bigger {
+	font-size: 14px;
+}
+ul.list li {
+	list-style: none none;
+	background: url("../img/xv-message-button.jpg") left 3px no-repeat;
+	padding-left: 30px;
+	font-size: 14px;
+	margin: 8px 0;
+}
+ul.circle_list li {
+	list-style: inside disc;
+	font-size: 14px;
+	margin: 8px 0;
+}
+.ui-autocomplete {
+	max-height: 250px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-right: 20px;
+}
+.ie-lt7 .ui-autocomplete {
+	height: 250px;
+}
+.profile-tag.ui-widget-header,
+.profile-tag {
+	background: #222;
+	border: none;
+	color: #fff;
+	font-weight: bold;
+    margin: 0 6px 4px 0;
+    padding: 2px 6px;
+	line-height: 13px;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.profile-tag.new,
+.profile-tag.ui-widget-header.new { background: #006000; }
+.profile-tag input { display: none; }
+.profile-tag span {
+	margin-left: 6px;
+	vertical-align: text-bottom;
+	cursor: pointer;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;
+}
+.profile-tag-error {
+	font-size: 11px;
+	color: #f00;
+	margin-left: 6px;
+}
+a.button.profile-tag-showall {
+	padding: 3px 2px 2px;
+    vertical-align: top;
+}
+.profile-tags { margin: 4px 2px 0 2px; }
+
+/* ==== CREATE PROFILE ==== */
+#main .redStripe.createProfileMsg {
+	margin-bottom: 2px;
+	border: 2px solid #000;
+	padding: 10px 20px;
+	margin-left: 220px;
+	margin-right: -930px;
+	width: 666px;
+}
+.redStripe.createProfileMsg p {
+	text-align: center;
+	margin-bottom: 15px;
+	font-size: 16px;
+	font-weight: bold;
+}
+.redStripe.createProfileMsg form {
+	background: #fff;
+	padding: 4px 10px;
+	color: #000;
+}
+.redStripe.createProfileMsg .formLine { margin: 8px 0; }
+.redStripe.createProfileMsg .formLine label { width: 160px; }
+.redStripe.createProfileMsg .formLine .content { padding-left: 180px }
+.redStripe.createProfileMsg .formLine input[type="submit"] {
+	font-weight: bold;
+	margin-left: 20px;	
+}
+
+/* ==== SIGNUP/SIGNIN ==== */
+#main #content.signInUp {
+	font-size: 14px;
+	line-height: 22px;
+}
+#main #content.signInUp h2 {
+	line-height: 20px;
+	margin: 6px 0 10px;
+}
+#main #content.signInUp .rightCol {
+	width: 420px;
+	float: right;
+	margin-left: 10px;
+}
+#main #content.signInUp .tabHeaderForm.notLoggedIn {
+	font-size: 15px;
+	line-height: 22px;
+	margin: 2px 0;
+	padding: 10px;
+	border: 1px solid #000000;
+}
+#main #content.signInUp .tabHeaderForm.notLoggedIn ul {
+	font-weight: bold;
+	padding-left: 30px;
+}
+#main #content.signInUp .form_global_error { margin-bottom: 15px; }
+#main #content.signInUp .formLine .content { line-height: 14px; }
+#main #content.signInUp form input[type="text"],
+#main #content.signInUp form input[type="password"] { width: 250px; }
+#main #content.signInUp .error input,
+#main #content.signInUp .error select { border-color: #f00; }
+#main #content.signInUp .formFields .inlineError {
+	font-size: 12px;
+	font-weight: normal;
+}
+#signupCaptcha {
+	width: 320px;
+	margin: 20px auto;
+}
+#signupCaptcha p {
+	text-align: center;
+	font-size: 12px;
+}
+#main #content.signInUp form .formActions { margin: 20px 0 0; }
+#main #content.signInUp form .formActions input[type="submit"],
+#main #content.signInUp a.button {
+	font-size: 16px;
+	font-weight: bold;
+	padding: 8px 20px;
+}
+#main #content.signInUp.uploadPicture .formFields { width: 700px; }
+#main #content.signInUp.uploadPicture .formFields label { width: 260px; }
+#main #content.signInUp.uploadPicture .formFields .content{ padding-left: 280px; }
+#resetPasswordForm input[type="submit"] { font-weight: bold; }
+#signinForm #signupCaptcha { margin: 20px 0 20px 90px; }
+#main #content #signinForm.show_captcha .tabHeaderForm.notLoggedIn { margin-bottom: 140px; }
+#signupForm .formLine label { width: 180px; }
+#signupForm .formLine .content { padding: 0 0 0 180px; }
+
+/* ==== FRIENDS ==== */
+.adminBox .profilesGalleries.smallThumbs .thumbProfile,
+.ui-dialog .profilesGalleries.smallThumbs .thumbProfile { width: 76px; }
+.adminBox .profilesGalleries.smallThumbs .thumbProfile p.profileName,
+.ui-dialog .profilesGalleries.smallThumbs .thumbProfile p.profileName {
+	font-weight: normal;
+	font-size: 14px;
+}
+.adminBox .profilesGalleries.smallThumbs .thumbProfile .actions { padding: 8px 0; }
+.adminBox .profilesGalleries.smallThumbs .thumbProfile .actions a { text-decoration: none; }
+.adminBox .profilesGalleries.smallThumbs .thumbProfile .confirmPendingFriendRequest { margin-right: 28px; }
+
+/* === FAVORITES ==== */
+#deleteFavoritesLists, #addFavoritesList { padding: 20px 10px 0; }
+#deleteFavoritesLists li { padding-bottom: 10px; }
+#deleteFavoritesLists a.button,
+#deleteFavoritesLists input[type="button"],
+#deleteFavoritesLists select,
+#deleteFavoritesLists input[type="text"] { 
+	padding: 2px 6px;
+	font-size: 12px;
+	line-height: 13px;
+}
+#deleteFavoritesLists select { padding-right: 2px; }
+#deleteFavoritesLists .editFavsListPanel {
+	background: #eee;
+	padding: 3px 10px;
+	margin: 8px 0 0 20px;
+	font-size: 12px; 
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+#deleteFavoritesLists .formActions { margin: 30px 0 10px; }
+#deleteFavoritesLists .taglist { margin-left: 20px; font-size: 11px; }
+#addFavoritesList label {
+	font-size: 14px;
+	width: 160px;
+}
+#addFavoritesList .content { padding-left: 180px; }
+#favs_list_delete_link {
+	float: right;
+	font-weight: normal;
+}
+.account_favorites .thumbBlock {
+	background: none;
+	border: none;
+	width: 33%;
+}
+.account_favorites .thumbBlock .thumbInside {
+	height: 220px;
+	padding: 10px;
+}
+.account_favorites .thumbBlock p.metadata { margin-top: 4px; }
+.account_favorites .thumbBlock .actions {
+	margin: 0 auto 5px ;
+	text-align: left;
+	overflow: hidden;
+	width: 180px;
+}
+.account_favorites .thumbBlock .actions .removeVideoFromFavListCntr { float: right; }
+.account_favorites .thumbBlock .actions input[type="button"] { padding: 2px 6px; }
+#favorites_list_batch_actions .list_batch_actions { margin: 10px 0; }
+#favorites_list_batch_actions .list_batch_actions input[type="submit"] { font-weight: bold; }
+#delete_selected_btn { margin-right: 50px; }
+
+/* === USER ADMIN: PICTURES ==== */
+#profilePictures .bigPicBox {
+	margin: 20px 0;
+	overflow: hidden;
+	*zoom: 1;
+}
+#profilePictures .bigPicBox p {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+#profilePictures .bigPicBox .thumb { float: left; }
+#profilePictures .bigPicBox .thumb a.button {
+	font-size: 12px;
+	margin-left: 20px;
+	line-height: 13px;
+}
+#profilePictures .bigPicBox .dl {
+	overflow: hidden;
+	margin-top: 80px;
+	text-align: center;
+}
+#profilePictures .bigPicBox .dl em { font-size: 12px; }
+#profilePictures .chooseAnotherPic {
+	font-size: 16px;
+        margin: 30px 0 15px;
+}
+#profilePictures .profilesGalleries .thumbProfile {
+	width: 122px;
+	padding: 5px 10px;
+}
+#profilePictures .profilesGalleries .thumbProfile .thumb { height: auto; }
+#profilePictures .profilesGalleries .actions {
+	width: auto;
+	padding: 10px 0 5px ;
+}
+#profilePictures .profilesGalleries .actions a.button {
+	font-size: 11px;
+	line-height: 13px;
+	padding: 1px 4px;
+}
+#galNewPanel {
+	margin: 15px 0;
+	background: #eee;
+	padding: 3px 10px;
+	font-size: 12px;
+}
+#galNewPanel input[type="text"] { width: 140px; }
+#gal_delete_link {
+	float: right;
+	font-weight: normal;
+}
+#galInfoPanel, .mediaListInfoPanel {
+	background: #eee;
+	padding: 4px 10px;
+	overflow: hidden;
+}
+#albumCover {
+	margin: 4px 10px 4px 0;
+	float: left;
+	border: 1px solid #000;
+}
+#galInfoPanel .noOverflow, .mediaListInfoPanel .noOverflow { overflow: hidden; }
+#galEditPanel, .mediaListInfoPanel .editPanel {
+	background: #fff;
+	border: 1px dotted #000000;
+    padding: 2px 3px;
+	font-size: 12px;
+	margin: 5px 0;
+	display: block;
+}	
+#galEditPanel input[type="text"] { width: 130px; }
+#albumsPictures { margin: 10px 6px 0; }
+#albumsPictures .profilesGalleries.squareThumbs .thumbProfile {
+	padding: 5px 2px;
+	height: 190px;
+}
+#albumsPictures .profilesGalleries.squareThumbs .thumbProfile .thumb img { cursor: move; }
+#albumsPictures .profilesGalleries .actions { padding: 5px 0 0; }
+#albumsPictures .profilesGalleries .actions a.button {
+	font-size: 11px;
+        line-height: 13px;
+        padding: 1px 4px;
+}
+#galUploadPanel {
+	margin-top: 30px;
+	overflow: hidden;
+	*zoom: 1;
+}
+#galUploadPanel p {
+	font-size: 15px;
+	float: left;
+	margin-right: 20px;
+}
+#galUploadPanel p .info {
+	background: #eee;
+	padding: 2px 2px 2px 0;
+	font-size: 11px;
+}
+#galUploadPanel form { overflow: hidden; }
+#galUploadPanel input { margin-bottom: 4px; }
+.albumsPicturesSortSaveBox {
+	margin: 10px 0;
+	border: 2px solid #f00;
+    color: #F00;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 0;
+    text-align: center;
+}
+.albumsPicturesSortSaveBox form { display: inline; }
+.albumsPicturesSortSaveBox form input {
+	font-size: 13px;
+	font-weight: bold;
+	margin-left: 20px;
+}
+
+/* === USER ADMIN: UPLOADS ==== */
+#uploads table { margin: 0 30px; }
+#uploads table th {
+	text-align: left;
+	vertical-align: top;
+	white-space: nowrap;
+}
+#uploads table td { padding-left: 10px; }
+#uploads table .video-channel td { font-weight: bold; }
+#uploads table .video-tags td { font-style: italic; }
+#uploads a.button {
+	margin: 2px 10px;
+    	padding: 1px 6px;
+}
+#deleted-videos {
+	padding: 4px 20px;
+	background: #eee;
+	border: 1px solid #f00;
+	margin: 0 0 30px;
+}
+#deleted-videos table { width: 100%; }
+#deleted-videos table td,
+#deleted-videos table th {
+	text-align: left;
+	padding: 3px 8px;
+}
+#pending-uploads { margin: 0 30px; }
+#pending-uploads ul { margin-top: 20px; }
+
+/* === USER ADMIN: UPLOAD EDIT/DELETE ==== */
+.videoEditThumbBlock { overflow: hidden; }
+.videoEditThumbBlock .thumb {
+	float: left;
+	margin: 0 20px 0 0;
+}
+.adminBox .contentbox .videoEditThumbBlock h4 {
+	margin: 50px 0 20px;
+	font-size: 18px;
+}
+.videoEditThumbBlock p { font-size: 16px; }
+#video-edit-form {
+	margin: 30px 30px 0;
+	font-size: 15px;
+}
+#video-edit-form .formLine { margin-bottom: 15px; }
+#video-edit-form .formLine > label { font-weight: bold; }
+#video-edit-form .formLine input[type="text"] { width: 430px; }
+#video-edit-form textarea { width: 438px; }
+#video-edit-form .formLine select { width: 452px; }
+#video-edit-form .formActions,
+#video-delete-form .formActions { margin: 40px 0; }
+#video-edit-form .formActions input, 
+#video-delete-form .formActions input { font-weight: bold; }
+#video-delete-form h4 { margin-top: 30px; font-size: 15px; }
+#video-delete-form textarea { width: 97%; }
+
+/* === USER ADMIN: UPLOAD FORM ==== */
+#account_upload .video-stats {
+	font-size: 12px;
+	text-align: center;
+}
+#account_upload h4.redText { font-size: 18px; }
+#account_upload p.upload_info { margin: 0 20px 6px; }
+#account_upload ul.upload_info li {
+	list-style: none none;
+	background: url("../img/xv-message-button.jpg") left center no-repeat;
+	padding-left: 30px;
+	font-size: 15px;
+	margin: 8px 0;
+}
+#account_upload .uploadFormLine {
+	margin-bottom: 40px;
+	font-size: 14px;
+}
+#uploadCategory h4 { margin-bottom: 15px; }
+#progressbox {
+	margin: 0 20px 10px;
+	overflow: hidden;
+}
+#progressbox .progresscontainer {
+	border: 1px solid #000000;
+	float: left;
+	height: 12px;
+	margin: 3px 10px 0 0;
+	width: 200px;
+}
+#progress {
+	background: #DE2600;
+	height: 12px;
+}
+#account_upload iframe {
+	margin: 0 20px 40px;
+	height: 70px;
+	width: 640px;
+}
+#uploadFilePickers {
+	width: 520px;
+	margin: 0 auto 20px;
+}
+#uploadFilePickers .uploadOr {
+        margin: 10px 0;
+        font-weight: bold;
+        font-size: 16px;
+        text-align: center;
+}
+
+#message_titleblacklist {
+	margin-top: 20px;
+	font-weight: bold;
+}
+#uploadTerms { margin-left: 20px; margin-right: 20px; }
+#uploadMessage {
+	width: 520px;
+	margin: 0 auto;
+}
+#uploadMessage textarea { width: 504px; }
+
+/* === USER ADMIN: UPLOADS DELETE ==== */
+ul.delete_info { margin-bottom: 30px; }
+ul.delete_info li {
+	list-style: none none;
+	background: url("../img/xv-message-button.jpg") left 3px no-repeat;
+	padding-left: 30px;
+	margin: 8px 0;
+}
+#uploads_multiple .pagination { margin: 10px 0; }
+#uploads_multiple thead th {
+	padding: 10px 8px;
+	font-size: 14px;
+	border-bottom: 2px solid #000;
+	border-top: 1px solid #000;
+}
+#uploads_multiple tbody td {
+	padding: 4px 8px;
+	border-bottom: 1px solid #000;
+}
+#uploads_multiple tbody tr.no-notice { cursor: pointer; }
+#uploads_multiple tbody tr.no-notice.selected { background: #eee; }
+#uploads_multiple tbody tr.no-notice.ctrl.selected { background: #f00; }
+#uploads_multiple tbody tr.no-notice:hover,
+#uploads_multiple tbody tr.no-notice.selected:hover { background: #ddd; }
+#uploads_multiple tbody tr.no-notice.ctrl.selected:hover { background: #d00; }
+#uploads_multiple th.actions,
+#uploads_multiple td.actions { padding-left: 0;  }
+#uploads_multiple .formActions input { font-weight: bold; }
+#uploads_multiple textarea { width: 97%; }
+
+/* ==== USER ADMIN: CREATE PROFILE ==== */
+#account_create_profile label { width: 160px; }
+#account_create_profile .content { padding-left: 180px; }
+
+/* ==== USER ADMIN: EDIT ACCOUNT/PROFILE */
+.adminBox .contentbox fieldset {
+	border: 1px solid #918E8C;
+	padding: 10px;
+	margin: 20px 0;
+}
+.adminBox .contentbox fieldset legend {
+	font-size: 14px;
+	font-weight: bold;
+}
+.adminBox .contentbox fieldset .content input[type="text"] { width: 200px; }
+.adminBox .contentbox fieldset .content select { width: 220px; }
+.adminBox .contentbox fieldset input[type="submit"] { font-weight: bold; }
+.adminBox .contentbox fieldset .formLine > label { font-size: 14px; }
+#profile-edit-account-info #day_select,
+#profile-edit-account-info #month_select,
+#profile-edit-account-info #year_select { width: auto; }
+#profile-edit-account-info .form_field_rememberme .content { padding-left: 0; }
+#profile-edit-privacy-settings .formLine > label { width: 250px; }
+#profile-edit-privacy-settings .formLine .content { padding-left: 270px; }
+#profile-edit-profile-info .form_field_languages .content span {
+	display: block;
+	float: left;
+	margin: 0 0 2px 0;
+	width: 24%;
+}
+#profile-edit-profile-info .form_field_body_unit {
+	float: right;
+	padding: 15px 0px 15px 5px;
+	margin: 3px 290px 0px 0px;
+	border-left: 1px solid #000;
+}
+#profile-edit-profile-info #height_text,
+#profile-edit-profile-info #weight_text { width: 50px; }
+#profile-edit-profile-info .formLine > label { width: 130px; }
+#profile-edit-profile-info .formLine .content { padding-left: 145px; }
+#website_text, #contact_infos_text { width: 467px; }
+
+/* ==== USER ADMIN: CHANGE INFO/PASSWORD/EMAIL, CLOSE ACCOUNT ==== */
+#changePassword {
+	width: 340px;
+	margin: 0 auto;
+}
+#changePassword label { font-size: 14px; }
+#changePassword .formActions {
+	text-align: center;
+	margin: 20px 0 40px;
+}
+#changePassword .formActions input { font-weight: bold; }
+
+#changeEmail p {
+	margin-bottom: 20px;
+	font-size: 14px;
+}
+#changeEmailForm label {
+	width: 180px;
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+#changeEmailForm .content { padding-left: 200px; }
+#changeEmailForm .content input[type="submit"] { font-weight: bold; }
+#changeEmail p.inlineSmallNote { font-size: 12px; }
+
+#editInformation input[type="submit"] { font-weight: bold; }
+
+#closeAccount textarea { width: 97%; margin-bottom: 20px; }
+#closeAccount input[type="submit"] { font-weight: bold; }
+#closeAccount .formActions { margin-bottom: 20px; }
+
+/* ==== USER ADMIN: UPLOAD DOCUMENT FORM ==== */
+#document_upload .verify-example {
+	position: relative;
+}
+#document_upload .verify-example .tick {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+#document_upload .verify-example .tick.reject {
+	left: 363px;
+}
+#document_upload ul.list li ul li {
+	background: none;
+	padding-left: 10px;
+	margin: 0;
+}
+#sendDocuments textarea { width: 95%; }
+#sendDocuments .formActions input { font-weight: bold; }
