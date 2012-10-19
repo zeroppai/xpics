@@ -28,6 +28,15 @@ function getImageItemsFromBeluga($since_id='0',$max_id='',$count=0){
 	return $items;
 }
 
+function getURLParams($url){
+  $param_string = explode('?',$url);
+  foreach (explode('&',$param_string[1]) as $value) {
+    $p = explode('=',$value);
+    $result[$p[0]] = $p[1];
+  }
+  return $result;
+}
+
 function dispHeader(){
 ?>
 <!DOCTYPE html>
