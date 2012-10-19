@@ -20,7 +20,7 @@
             <script src="library/juicebox/jbcore/juicebox.js"></script>
             <script>
                 new juicebox({
-                    backgroundColor:'rgba(0,0,0,.9)',
+                    backgroundColor:'rgba(120,120,120,.9)',
                     xbackgroundColor:'fff',
                     containerid:'juicebox-container',
                     galleryWidth:'588',
