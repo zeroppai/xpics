@@ -85,7 +85,7 @@ function dispHeader(){
         <p>
           <a href="index.php?action=upload"><b>Upload Picture</b></a> | <a href="http://upload.xvideos.com/account"><b>Log in</b></a>
         </p>
-        <ul>
+<!--         <ul>
           <li><strong><a href="#">Real Amateur Porn Pictures</a></strong></li>
           <li>||</li>
           <li><a href="#">Best Of Today</a></li>
@@ -94,7 +94,7 @@ function dispHeader(){
           <li>|</li>
           <li><a href="#">Best Of 30 Days</a></li>
           <li>|</li>
-        </ul>
+        </ul> -->
       </div>
 <!--
       <div class="redStripe redStripeBordered">
