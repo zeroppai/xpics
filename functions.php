@@ -154,6 +154,16 @@ function dispImageThumbnail($item){
 <?
 }
 
+function dispTags(){
+?>
+      <ul id="video-tags">
+        <li><em>Tags</em></li>
+          <li><a href="/tags/facial">facial</a>, </li>
+          <li>more <a href="/tags/"><strong>タグ</strong></a>.</li>
+      </ul>
+<?
+}
+
 function dispPopCategory(){
 ?>
     <div id="categories" class="pagination lighter">

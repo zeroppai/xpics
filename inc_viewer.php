@@ -1,6 +1,4 @@
-<?
-dispHeader();
-?>
+<? dispHeader(); ?>
 <link rel="stylesheet" href="http://static.xvideos.com/v2/css/xv-video-styles.css">
 <div id="main">
 
@@ -10,11 +8,7 @@ dispHeader();
         id_video = 2152284;
       </script>
     
-      <ul id="video-tags">
-        <li><em>Tags</em></li>
-          <li><a href="/tags/facial">facial</a>, </li>
-          <li>more <a href="/tags/"><strong>タグ</strong></a>.</li>
-      </ul>
+      <? dispTags(); ?>
       
       <div id="content">
         <div id="video-ad">
@@ -47,7 +41,5 @@ dispHeader();
     </div>
 
     <? dispPopCategory(); ?>
-    
-<?
-dispFooter();
-?>
+
+<? dispFooter(); ?>
