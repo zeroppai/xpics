@@ -3,12 +3,12 @@
 <div id="main">
 
       <h2><?=$item['title']?></h2>
-      
-      <script language="javascript" type="text/javascript">
-        id_video = 2152284;
-      </script>
     
-      <? dispTags(); ?>
+      <ul id="video-tags">
+        <li><em>Tags</em></li>
+          <li><a href="/tags/facial">facial</a>, </li>
+          <li>more <a href="/tags/"><strong>タグ</strong></a>.</li>
+      </ul>
       
       <div id="content">
         <div id="video-ad">

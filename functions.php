@@ -151,7 +151,6 @@ function dispImageThumbnail($item){
 		<div class="thumb">
 			<a href="index.php?action=viewer&id=<?=$item['id']?>" ><img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['id']?>"></a>
 		</div>
-		<p><a href="index.php?action=viewer&id=<?=$item['id']?>" ><?=$item['title']?></a></p>
 
 		<p class="metadata">
 			<span class="bg">
