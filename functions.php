@@ -149,9 +149,9 @@ function dispImageThumbnail($item){
 <div class="thumbBlock" id="iamge_<?=$item['id']?>">
 	<div class="thumbInside">
 		<div class="thumb">
-			<a href="<?=$item['image_url']?>" target="_blank"><img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['id']?>"></a>
+			<a href="index.php?action=viewer&id=<?=$item['id']?>" ><img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['id']?>"></a>
 		</div>
-		<p><a href="<?=$item['image_url']?>" target="_blank"><?=$item['title']?></a></p>
+		<p><a href="index.php?action=viewer&id=<?=$item['id']?>" ><?=$item['title']?></a></p>
 
 		<p class="metadata">
 			<span class="bg">

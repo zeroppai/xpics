@@ -2,8 +2,8 @@
 include('../../module/functions.php');
 include('../../module/beluga.php');
 include('../../functions.php');
-$params = getURLParams($_SERVER['HTTP_REFERER']?$_SERVER['HTTP_REFERER']:'http://127.0.0.1/xpicts/index.php?action=viewer&id=50');
-$items = getAll('SELECT * FROM picture WHERE 1=1 ORDER BY id DESC LIMIT '.intval($params['id']).',40');
+$params = getURLParams($_SERVER['HTTP_REFERER']);
+$items = getAll('SELECT * FROM picture WHERE id<='.dq($params['id']).' ORDER BY id DESC LIMIT 100');
 ?>
 <xml version="1.0" encoding="UTF-8">
 
@@ -21,7 +21,7 @@ $items = getAll('SELECT * FROM picture WHERE 1=1 ORDER BY id DESC LIMIT '.intval
 	thumbURL="<?=trim($item['thumbnail_url'])?>"
 	linkURL="<?=trim($item['image_url'])?>"
 	linkTarget="_blank">
-    <title><?=trim($item['title'])?></title>
+    <title><?=h(trim($item['title']))?></title>
     <caption></caption>
   </image>
 <?}?>
