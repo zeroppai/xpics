@@ -18,6 +18,7 @@ function defaultAction(){
 }
 
 function viewerAction(){
+	$item = get('SELECT * FROM picture WHERE id='.dq($_GET['id']));
 	include('inc_viewer.php');
 }
 

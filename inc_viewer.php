@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="http://static.xvideos.com/v2/css/xv-video-styles.css">
 <div id="main">
 
-      <h2>Asian doll is cute when fucking cock</h2>
+      <h2><?=$item['title']?></h2>
       
       <script language="javascript" type="text/javascript">
         id_video = 2152284;
