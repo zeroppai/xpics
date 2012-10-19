@@ -17,6 +17,10 @@ function defaultAction(){
 	include('inc_index.php');
 }
 
+function viewerAction(){
+	include('inc_viewer.php');
+}
+
 function uploadAction(){
 	include('inc_upload.php');
 }

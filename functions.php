@@ -153,3 +153,47 @@ function dispImageThumbnail($item){
 </div>
 <?
 }
+
+function dispPopCategory(){
+?>
+    <div id="categories" class="pagination lighter">
+      <ul>
+        <li><a href="#"> muridana</a></li>
+        <li><a href="#"> asd</a></li>
+        <li><a href="#"> gagaga</a></li>
+        <li><a href="#"> oppai</a></li>
+        <li><a href="#"> homo</a></li>
+      </ul>
+    </div> <!-- #categories -->
+<?
+}
+
+function dispVoteTab($y_num=1,$n_num=1){
+  $rate = sprintf('%.2f',$y_num*100/($y_num+$n_num));
+?>
+      <div id="videoTabs" class="tabsContainer">
+        <ul class="tabButtons">
+          <li id="tabVote">
+            <img src="./library/juicebox/thumbs/none.jpeg" height="24" width="32" class="thumb">
+  
+            <span class="voteActions">
+              Did you like this picture ?
+              <a id="voteYes" class="button btnVote withThumb">&nbsp;&nbsp;&nbsp;</a><a id="voteNo" class="button btnVote withThumb">&nbsp;&nbsp;&nbsp;</a>
+            </span>
+            
+            <div class="ratingBarBlock">
+              <div class="ratingBar">
+                <div style="width:<?=$rate?>%;" id="ratingBarGood"></div>
+              </div>
+              <div class="ratingCounts">
+                <span id="ratingGood"><?=$y_num?></span> Good, <span id="ratingBad"><?=$y_num?></span> Bad
+              </div>
+            </div>
+            
+            <span id="rating"><?=$rate?>%</span>
+          </li>
+        </ul>
+      </div> <!-- #videoTabs -->
+<?
+}
+

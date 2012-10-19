@@ -1,6 +1,4 @@
-<?
-dispHeader();
-?>
+<? dispHeader(); ?>
     <div id="main">
       
       <div id="ads">
@@ -41,16 +39,6 @@ dispHeader();
       </div> <!-- #content -->      
     </div> <!-- #main -->
 
-    <div id="categories" class="pagination lighter">
-      <ul>
-        <li><a href="#"> muridana</a></li>
-        <li><a href="#"> asd</a></li>
-        <li><a href="#"> gagaga</a></li>
-        <li><a href="#"> oppai</a></li>
-        <li><a href="#"> homo</a></li>
-      </ul>
-    </div> <!-- #categories -->
+    <? dispPopCategory(); ?>
     
-<?
-dispFooter();
-?>
+<? dispFooter(); ?>
