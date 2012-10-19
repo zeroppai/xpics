@@ -379,7 +379,7 @@ header {
 	font-size: 13px;
 	overflow: hidden;
 }
-header img#siteLogo { float: left; }
+header img#siteLogo { float: left; width:145px;}
 
 header form#searchForm {
 	float: left;

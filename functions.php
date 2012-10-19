@@ -68,12 +68,12 @@ function dispHeader(){
     <header>
       <div class="whiteStripe clearfix">
         <div id="social">
-          <a href="#" target="_blank"><img src="./js/xv-rss.png" alt="XML RSS feed"></a>
-          <a href="http://beluga.fm/" target="_blank"><img src="./js/xv-red-twitter.png" alt="XVideos on Twitter"></a>
+          <a href="#" target="_blank"><img src="./img/xv-rss.png" alt="XML RSS feed"></a>
+          <a href="http://beluga.fm/" target="_blank"><img src="./img/xv-red-twitter.png" alt="XVideos on Twitter"></a>
         </div>
-        <a href="./index.php"><img src="./js/xvideos.gif" alt="XPicts Home" id="siteLogo"></a>
+        <a href="./index.php"><img src="./img/xpicts_logo.png" alt="XPicts Home" id="siteLogo"></a>
         <h1 class="hidden">XPICTS.NET</h1>
-        <form action="./js/Free Porn Videos - XVIDEOS.COM.html" method="get" id="searchForm">
+        <form action="#" method="get" id="searchForm">
           <input type="text" name="k" value="" id="q" maxlength="2048" size="30">
           <input type="submit" value="Search" id="searchSubmit">
         </form>
