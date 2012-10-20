@@ -25,11 +25,11 @@ function viewerAction(){
 function uploadAction(){
 	include('inc_upload.php');
 }
-function uploadArchiveAction(){
-	put('picture',array(
-		'title'=>$_POST['image']['name'],
-		'thumbnail_url'=>$_POST['links']['small_square'],
-		'image_url'=>$_POST['links']['original'],
+
+function makeArchiveAction(){
+	echo put('archive',array(
+		'name'=>$_POST['name'],
+		'tags'=>$_POST['tags'],
 		'rate'=>'1'
 	));
 }

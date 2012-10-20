@@ -38,11 +38,11 @@ $('#uploadButton').click(function(){
 	//upload archive
 	if($('#make_archive').is(':checked')){
 		var data = {
-			name:$('#archive_name').attr("value"),
-			tags:$('#archive_tags').attr("value")
+			name:$('#archive_name').attr('value'),
+			tags:$('#archive_tags').attr('value')
 		};
 		$.post(
-			'./index.php?action=uploadArchive',
+			'./index.php?action=makeArchive',
 			data,
 			function(msg){
 				console.log(msg);
