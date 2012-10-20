@@ -25,9 +25,17 @@ function viewerAction(){
 function uploadAction(){
 	include('inc_upload.php');
 }
+function uploadArchiveAction(){
+	put('picture',array(
+		'title'=>$_POST['image']['name'],
+		'thumbnail_url'=>$_POST['links']['small_square'],
+		'image_url'=>$_POST['links']['original'],
+		'rate'=>'1'
+	));
+}
 
 function uploadImageAction(){
-	put('picture',array(
+	echo put('picture',array(
 		'title'=>$_POST['image']['name'],
 		'thumbnail_url'=>$_POST['links']['small_square'],
 		'image_url'=>$_POST['links']['original'],

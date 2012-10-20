@@ -8,3 +8,9 @@ CREATE TABLE  `xpicts`.`picture` (
 	`rate` VARCHAR( 11 ) NOT NULL ,
 	`date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE = MYISAM ;
+
+CREATE TABLE  `xpicts`.`archive_pages` (
+`page_id` INT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+`archive_id` INT NOT NULL ,
+`picture_id` INT NOT NULL
+) ENGINE = MYISAM ;

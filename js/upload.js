@@ -35,6 +35,23 @@ function registImage(data){
 }
 
 $('#uploadButton').click(function(){
+	//upload archive
+	if($('#make_archive').is(':checked')){
+		var data = {
+			name:$('#archive_name').attr("value"),
+			tags:$('#archive_tags').attr("value")
+		};
+		$.post(
+			'./index.php?action=uploadArchive',
+			data,
+			function(msg){
+				console.log(msg);
+			},
+			'JSON'
+		);
+	}
+
+	//upload picture
 	$('#uploadMessages').children('img').each(function(){
 		var data = {
 			name:$(this).attr('name'),
