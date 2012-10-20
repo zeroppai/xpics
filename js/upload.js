@@ -2,6 +2,7 @@
  * upload functions
  */
 var dev_key = '01a582f5d7518e3ef620061ecb8023ac';
+var archive_id = 0;
 
 function uplaodToImgurl(data){
 	$.ajax({
@@ -26,12 +27,28 @@ function registImage(data){
 		data:data.upload,
 		success:function(msg){
 			console.log(msg);
+			addToArchive(archive_id,msg);
 		},
 		error:function(msg){
 			$('#uploadMessages').html('<strong>registerに失敗しました。</strong>');
 			console.log(msg);
 		}
 	});
+}
+
+function addToArchive(archive_id,picture_id){
+	var data = {
+		archive_id:archive_id,
+		picture_id:picture_id
+	};
+	$.post(
+		'./index.php?action=addToArchive',
+		data,
+		function(msg){
+			console.log(msg);
+		},
+		'JSON'
+	);
 }
 
 $('#uploadButton').click(function(){
@@ -46,23 +63,29 @@ $('#uploadButton').click(function(){
 			data,
 			function(msg){
 				console.log(msg);
+				archive_id = msg;
+				uploadImage();
 			},
 			'JSON'
 		);
+	}else{
+		uploadImage();
 	}
 
-	//upload picture
-	$('#uploadMessages').children('img').each(function(){
-		var data = {
-			name:$(this).attr('name'),
-			key:dev_key,
-			type:'base64',
-			image:null
-		};
-		var src = $(this).attr('src').split(',');
-		data.image = src[1];
+	function uploadImage(){
+		//upload picture
+		$('#uploadMessages').children('img').each(function(){
+			var data = {
+				name:$(this).attr('name'),
+				key:dev_key,
+				type:'base64',
+				image:null
+			};
+			var src = $(this).attr('src').split(',');
+			data.image = src[1];
 
-		console.log(data);
-		uplaodToImgurl(data);
-	});
+			console.log(data);
+			uplaodToImgurl(data);
+		});
+	}
 });

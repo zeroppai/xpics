@@ -34,6 +34,13 @@ function makeArchiveAction(){
 	));
 }
 
+function addToArchiveAction(){
+	echo put('archive_pages',array(
+		'archive_id'=>$_POST['archive_id'],
+		'picture_id'=>$_POST['picture_id']
+	));
+}
+
 function uploadImageAction(){
 	echo put('picture',array(
 		'title'=>$_POST['image']['name'],
