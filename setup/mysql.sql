@@ -14,3 +14,13 @@ CREATE TABLE  `xpicts`.`archive_pages` (
 `archive_id` INT NOT NULL ,
 `picture_id` INT NOT NULL
 ) ENGINE = MYISAM ;
+
+CREATE TABLE IF NOT EXISTS `archive` (
+  `archive_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `thumbnail_url` varchar(512) COLLATE utf8_unicode_ci,
+  `tags` text COLLATE utf8_unicode_ci NOT NULL,
+  `rate` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`archive_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;

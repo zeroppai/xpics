@@ -86,7 +86,7 @@ function dispHeader(){
           <li><a href="./index.php">Best Pictures</a></li>
           <li><a href="./index.php">Hits</a></li>
           <li><a href="./index.php">Tags</a></li>
-          <li><a href="./index.php">Archives</a></li>
+          <li><a href="./index.php?action=archive">Archives</a></li>
         </ul>
       </div>
       
@@ -158,6 +158,25 @@ function dispImageThumbnail($item){
 			</span>
 		</p>
 	</div>
+</div>
+<?
+}
+
+function dispArchiveThumbnail($item){
+?>
+<div class="thumbBlock" id="archive_<?=$item['archive_id']?>">
+  <div class="thumbInside">
+    <div class="thumb">
+      <a href="index.php?action=viewer&archive_id=<?=$item['archive_id']?>" ><img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['archive_id']?>"></a>
+    </div>
+
+    <p class="metadata">
+      <span class="bg">
+        <p><a><?=$item['name']?></a></p>
+        <span class="duration">Quality:<?=$item['rate']?></span>
+      </span>
+    </p>
+  </div>
 </div>
 <?
 }

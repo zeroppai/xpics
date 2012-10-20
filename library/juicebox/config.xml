@@ -2,8 +2,14 @@
 include('../../module/functions.php');
 include('../../module/beluga.php');
 include('../../functions.php');
+
 $params = getURLParams($_SERVER['HTTP_REFERER']);
-$items = getAll('SELECT * FROM picture WHERE id<='.dq($params['id']).' ORDER BY id DESC LIMIT 100');
+
+if(isset($params['archive']) && $params['archive']>0){
+  $items = getAll('SELECT * FROM picture WHERE id<='.dq($params['id']).' ORDER BY id');
+}else{
+  $items = getAll('SELECT * FROM picture WHERE id<='.dq($params['id']).' ORDER BY id DESC LIMIT 100');
+}
 ?>
 <xml version="1.0" encoding="UTF-8">
 
