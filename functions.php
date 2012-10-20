@@ -59,6 +59,7 @@ function dispHeader(){
   <script src="./js/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="http://static.xvideos.com/v2/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
+  <script type="text/javascript" src="./js/jquery.blockUI.js"></script>
   <script src="./js/modernizr-2.5.3.min.js"></script>
   <script src="./js/script-head.js"></script>
   <script src="./js/mobile.js"></script>
