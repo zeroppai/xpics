@@ -6,8 +6,10 @@
     
       <ul id="video-tags">
         <li><em>Tags</em></li>
-          <li><a href="/tags/facial">facial</a>, </li>
-          <li>more <a href="/tags/"><strong>タグ</strong></a>.</li>
+        <?foreach (explode(',', $item['tags']) as $val) {?>
+          <li><a href="./tags/<?=$val?>"><?=$val?></a>, </li>
+        <?}?>
+          <li>more <a href="./tags/"><strong>タグ</strong></a>.</li>
       </ul>
       
       <div id="content">
