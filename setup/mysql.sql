@@ -17,7 +17,7 @@ CREATE TABLE  `xpicts`.`archive_pages` (
 
 CREATE TABLE IF NOT EXISTS `archive` (
   `archive_id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `thumbnail_url` varchar(512) COLLATE utf8_unicode_ci,
   `tags` text COLLATE utf8_unicode_ci NOT NULL,
   `rate` varchar(11) COLLATE utf8_unicode_ci NOT NULL,

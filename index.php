@@ -18,7 +18,11 @@ function defaultAction(){
 }
 
 function viewerAction(){
-	$item = get('SELECT * FROM picture WHERE id='.dq($_GET['id']));
+	if(isset($_GET['archive_id'])){
+		$item = get('SELECT * FROM archive WHERE archive_id='.dq($_GET['archive_id']));
+	}else{
+		$item = get('SELECT * FROM picture WHERE id='.dq($_GET['id']));
+	}
 	include('inc_viewer.php');
 }
 
@@ -39,7 +43,7 @@ function uploadAction(){
 
 function makeArchiveAction(){
 	echo put('archive',array(
-		'name'=>$_POST['name'],
+		'title'=>$_POST['name'],
 		'tags'=>$_POST['tags'],
 		'thumbnail_url'=>'./img/none.jpeg',
 		'rate'=>'1'
