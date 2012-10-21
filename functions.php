@@ -59,10 +59,9 @@ function dispHeader(){
   <script src="./js/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="http://static.xvideos.com/v2/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
+  <script src="./js/jquery.tools.min.js"></script>
   <script type="text/javascript" src="./js/jquery.blockUI.js"></script>
   <script src="./js/modernizr-2.5.3.min.js"></script>
-  <script src="./js/script-head.js"></script>
-  <script src="./js/mobile.js"></script>
 </head>
 <body>
   <div id="page">
@@ -183,7 +182,7 @@ function dispArchiveThumbnail($item){
 
     <p class="metadata">
       <span class="bg">
-        <p><a><?=$item['title']?></a></p>
+        <p><a href="index.php?action=viewer&archive_id=<?=$item['archive_id']?>" ><?=$item['title']?></a></p>
         <span class="duration">Quality:<?=$item['rate']?></span>
       </span>
     </p>

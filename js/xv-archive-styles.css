@@ -1,0 +1,62 @@
+/*
+root element for the scrollable.  when scrolling occurs this
+element stays still.
+*/
+
+.scrollPreview div{
+  border:1px solid #ccc;
+}
+
+/* スクロール部分 */
+.scrollable {
+  position:relative;
+  overflow:hidden;
+  width:800px;
+  height:100px;
+  float:left;
+}
+
+.scrollable .items {
+  width:20000em;
+  position:absolute;
+}
+
+.items div {
+  float:left;
+  margin-right: 3px;
+}
+
+.scrollable img {
+  background-color:#fff;
+  width: 100px;
+  height: 100px;
+}
+
+.scrollable .active {
+  border:2px solid #000;
+  position:relative;
+  cursor:default;
+}
+
+a.browse {
+  background: url(../img/hori_large.png) no-repeat;
+  display: block;
+  width: 30px;
+  height: 30px;
+  float: left;
+  margin: 35px 10px;
+  cursor: pointer;
+  font-size: 1px;
+}
+
+a.right {
+  background-position: 0 -30px;
+  clear: right;
+  margin-right: 0px;
+}
+a.right:hover  { background-position: -30px -30px; }
+
+a.left {
+  margin-left: 0px;
+}
+a.left:hover  { background-position:-30px 0; }
