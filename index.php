@@ -39,17 +39,19 @@ function archiveAction(){
 }
 
 function editArchiveAction(){
+	if(!isset($_SESSION['user'])) location('index.php');
+
 	if(isset($_GET['page']) && $_GET['page']>0){
 		$page_count = $_GET['page'] * 40; 
 	}else{
 		$page_count = 0;
 	}
-	
+
 	if(isset($_GET['archive_id']) && is_numeric($_GET['archive_id'])){
 		$archive = get('SELECT * FROM archive WHERE archive_id='.dq($_GET['archive_id']));
-		$item_list = getAll('SELECT picture.id, picture.image_url, picture.thumbnail_url, picture.rate FROM archive_pages'
+		$item_list = getAll('SELECT archive_pages.page_id, picture.id, picture.image_url, picture.thumbnail_url, picture.rate FROM archive_pages'
 		    .' JOIN picture ON picture.id=archive_pages.picture_id'
-		    .' WHERE archive_pages.archive_id = '.dq($_GET['archive_id']) );
+		    .' WHERE archive_pages.archive_id = '.dq($_GET['archive_id']).' ORDER BY archive_pages.page_id');
 
 		$page_max = ceil((g('SELECT id FROM picture ORDER BY id DESC')+1)/40)-1;
 		$items = getAll('SELECT * FROM picture WHERE 1=1 ORDER BY id DESC LIMIT '.$page_count.',40');
@@ -62,6 +64,25 @@ function editArchiveAction(){
 
 		include('inc_edit_archive_list.php');
 	}
+}
+
+function addPictureAction(){
+	if(!isset($_SESSION['user'])) location('index.php');
+
+	put('archive_pages',array(
+		'archive_id'=>$_GET['archive_id'],
+		'picture_id'=>$_GET['picture_id']
+	));
+	location('index.php?action=editArchive&'.gu('archive_id,page'));
+}
+
+function removePictureAction(){
+	if(!isset($_SESSION['user'])) location('index.php');
+
+	query('DELETE FROM archive_pages WHERE archive_id='.dq($_GET['archive_id'])
+		.' AND picture_id='.dq($_GET['picture_id']));
+
+	location('index.php?action=editArchive&'.gu('archive_id,page'));
 }
 
 function uploadAction(){
@@ -82,6 +103,8 @@ function logoutAction(){
 	unset($_SESSION['user']);
 	location('./index.php');	
 }
+
+/* for ajax */
 
 function makeArchiveAction(){
 	echo put('archive',array(

@@ -85,7 +85,7 @@
             if($i%7===0){
               echo '<div>'.chr(10);
             }
-            echo '<a href="'.$item['image_url'].'" target="_blank"><img src="'.$item['thumbnail_url'].'"/></a>'.chr(10);
+            echo '<a href="index.php?action=removePicture&archive_id='.h($_GET['archive_id']).'&picture_id='.$item['id'].'&page='.h($_GET['page']).'" target="_blank"><img src="'.$item['thumbnail_url'].'"/></a>'.chr(10);
             if(($i+1)%7===0 || count($item_list)<=$i+1 ){
               echo '</div>'.chr(10);
             }
@@ -103,10 +103,10 @@
           <strong>ADD PICTURES</strong>
         </div>
           <? foreach ($items as $item) { ?>
-          <div class="thumbBlock" id="archive_<?=$item['archive_id']?>">
+          <div class="thumbBlock" id="picture_<?=$item['id']?>">
             <div class="thumbInside">
               <div class="thumb">
-                <a href="index.php?action=editArchive&archive_id=<?=$item['archive_id']?>" ><img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['archive_id']?>"></a>
+                <a href="index.php?action=addPicture&archive_id=<?=h($_GET['archive_id']).'&picture_id='.$item['id'].'&page='.h($_GET['page'])?>" ><img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['id']?>"></a>
               </div>
 
               <p class="metadata">
