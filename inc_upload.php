@@ -26,7 +26,7 @@ dispHeader();
 
       <form id="upload" method="POST" enctype="multipart/form-data">
         <fieldset>
-          <legend>アップロード（同時に大量にアップロードすると失敗することがあります）</legend>
+          <legend>アップロード（上限は２MB、同時に大量にアップロードすると失敗することがあります）</legend>
           <div class="formLine" style="margin-left:20px;">
             <input type="checkbox" id="make_archive" onchange="$('div.archive_form').toggle();"/><span class="check_label">同時にアーカイブを作成する</span>
             <div class="archive_form" style="display:none; margin-left:10px;">
