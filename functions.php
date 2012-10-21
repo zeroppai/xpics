@@ -51,7 +51,7 @@ function dispHeader(){
   <meta name="description" content="XPICTS Free Porn Images free">
   
   <link rel="search" type="application/opensearchdescription+xml" title="XPicts" href="http://beluga.fm"/>
-  <link rel="shortcut icon" href="http://static.xvideos.com/img/favicon_xvideos.ico"/>
+  <link rel="shortcut icon" href="./img/favicon_xvideos.ico"/>
   <link rel="stylesheet" href="./js/xv-styles.css"/>
   <link rel="stylesheet" href="./js/xv-account-styles.css"/>
   <link rel="stylesheet" type="text/css" media="all" href="./js/html5_styles.css" />
@@ -93,7 +93,15 @@ function dispHeader(){
       
       <div class="blackStripe clearfix" id="secondaryMenu">
         <p>
-          <a href="index.php?action=upload"><b>Upload Picture</b></a> | <a href="http://upload.xvideos.com/account"><b>Log in</b></a>
+        <? if(isset($_SESSION['user']['user_id']) && $_SESSION['user']['user_id']>0 ){ ?>
+          <a href="index.php?action=editArchive"><b>Edit Archive</b></a> | 
+        <? } ?>
+          <a href="index.php?action=upload"><b>Upload Picture</b></a> | 
+        <? if(isset($_SESSION['user']['user_id']) && $_SESSION['user']['user_id']>0 ){ ?>
+          <a href="index.php?action=logout"><b>Log out</b></a> | 
+        <? }else{ ?>
+          <a href="index.php?action=login"><b>Log in</b></a>
+        <? } ?>
         </p>
 <!--         <ul>
           <li><strong><a href="#">Real Amateur Porn Pictures</a></strong></li>
@@ -133,6 +141,8 @@ function dispFooter(){
     </footer>
     
   </div> <!-- #page  -->
+
+  <?// out($_SESSION); ?>
 </body></html>
 <?
 }

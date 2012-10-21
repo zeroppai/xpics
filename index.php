@@ -41,6 +41,21 @@ function uploadAction(){
 	include('inc_upload.php');
 }
 
+function loginAction(){
+	if(isset($_GET['user_token']) && isset($_GET['user_id'])){
+		$_SESSION['user']['user_id'] = $_GET['user_id'];
+		$_SESSION['user']['user_token'] = $_GET['user_token'];
+		location('./index.php');
+	}else{
+		location('http://beluga.fm/authorize?app_id=53');
+	}
+}
+
+function logoutAction(){
+	unset($_SESSION['user']);
+	location('./index.php');	
+}
+
 function makeArchiveAction(){
 	echo put('archive',array(
 		'title'=>$_POST['name'],

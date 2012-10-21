@@ -1,6 +1,8 @@
 <?php
 require(dirname(__FILE__) . '/../config/config.php');
 
+session_start();
+
 $ret = mysql_connect($config['db']['host'], $config['db']['user'], $config['db']['password']) OR DIE('CONNECTION FAILURE');
 
 query('USE `'.$config['db']['database'].'`');
