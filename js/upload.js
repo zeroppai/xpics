@@ -17,6 +17,7 @@ function uplaodToImgurl(data){
 		error:function(msg){
 			$('#uploadMessages').html('<strong>アップロードに失敗しました。</strong>');
 			console.log(msg);
+			if(--request_count<=0)$.unblockUI();
 		}
 	 });
 }
@@ -33,6 +34,7 @@ function registImage(data){
 		error:function(msg){
 			$('#uploadMessages').html('<strong>registerに失敗しました。</strong>');
 			console.log(msg);
+			if(--request_count<=0)$.unblockUI();
 		}
 	});
 }
