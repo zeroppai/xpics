@@ -173,7 +173,7 @@ function dispArchiveThumbnail($item){
 
     <p class="metadata">
       <span class="bg">
-        <p><a><?=$item['name']?></a></p>
+        <p><a><?=$item['title']?></a></p>
         <span class="duration">Quality:<?=$item['rate']?></span>
       </span>
     </p>
