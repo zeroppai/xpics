@@ -2,7 +2,12 @@
 <link rel="stylesheet" href="http://static.xvideos.com/v2/css/xv-video-styles.css">
 <div id="main">
 
-      <h2><?=$item['title']?></h2>
+      <h2><?
+      echo $item['title'];
+      if(isset($_GET['archive_id']) && isset($_SESSION['user']) ){
+        echo '&nbsp;<button style="font-size:70%;" onclick="location.href=\'index.php?action=editArchive&archive_id='.h($_GET['archive_id']).'\';">編集</button>';
+      }
+      ?></h2>
     
       <ul id="video-tags">
         <li><em>Tags</em></li>
