@@ -3,9 +3,21 @@
       
       <div id="ads">
       </div> <!-- #ads -->
-      
       <div class="redStripe">
-        <strong>NEW PICTURES</strong> - These pictures are uploaded from beluga.fm.
+        <strong>NEW ARCHIVE</strong>
+      </div>
+      <div id="content">
+        <div class="mozaique">
+        <?
+        foreach ($archives as $item) {
+              dispArchiveThumbnail($item);
+        }
+        ?>
+        </div>
+      </div>
+
+      <div class="redStripe">
+        <strong>NEW PICTURES</strong>
       </div>
       <div id="content">
         <div class="mozaique">
