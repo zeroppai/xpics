@@ -16,7 +16,7 @@
       </div> <!-- #ads -->
       
       <div class="redStripe">
-        <strong>EDIT ARCHIVE</strong> - These pictures are uploaded from beluga.fm.
+        <strong>EDIT ARCHIVE</strong> - 基本情報設定
       </div>
       <div id="content" class="signInUp">
         <div class="rightCol">
@@ -37,13 +37,13 @@
                     </span>
                   </p>
                 </div>
-                <button onclick="refresh()">更新</button>
               </div>
             </ul>
           </div>
         </div>
 
-        <div class="formFields" onchange="refresh()">
+        <div class="formFields">
+          <form action="./index.php?action=saveArchive&<?=$archive_params ?>" method="POST">
           <div class="formLine titlr" style="position: relative; overflow: visible; ">
             <label for="archive_title">Archive Title:</label>
             <div class="content">
@@ -59,9 +59,18 @@
           <div class="formLine thumbnail" style="position: relative; overflow: visible; ">
             <label for="archive_thumbnail">Archive Thumbnail:</label>
             <div class="content">
-              <input name="archive_thumbnail" style="width: 300px;" id="archive_thumbnail" type="text" value="<?=$archive['thumbnail_url'] ?>" >
+              <input name="archive_thumbnail" style="width: 300px;" id="archive_thumbnail" type="text" value="<?=$archive['thumbnail_url'] ?>" />
             </div>
           </div>
+          <div class="formLine buttons" style="position: relative; overflow: visible; ">
+            <div class="content">
+              <input name="rate" type="hidden" value="<?=$archive['rate'] ?>"/>
+              <input name="archive_id" type="hidden" value="<?=$archive['archive_id'] ?>"/>
+              <button type="button" onclick="refresh()">サムネプレビュー</button>
+              <button type="submit">変更保存</button>
+            </div>
+          </div>
+          </form>
         </div>
 
       </div> <!-- #content -->
@@ -69,7 +78,7 @@
 
       <div class="scrollPreview"> <!-- #scrollPreview -->
         <div class="redStripe">
-          <strong>PREVIEW SLIDESHOW</strong>
+          <strong>PREVIEW SLIDESHOW - 画像をクリックするとスライドショウから削除できます</strong>
         </div>
 
         <!-- "previous page" action -->
@@ -85,7 +94,7 @@
             if($i%7===0){
               echo '<div>'.chr(10);
             }
-            echo '<a href="index.php?action=removePicture&archive_id='.h($_GET['archive_id']).'&picture_id='.$item['id'].'&page='.h($_GET['page']).'" target="_blank"><img src="'.$item['thumbnail_url'].'"/></a>'.chr(10);
+            echo '<a href="index.php?action=removePicture&'.$archive_params.'" target="_blank"><img src="'.$item['thumbnail_url'].'"/></a>'.chr(10);
             if(($i+1)%7===0 || count($item_list)<=$i+1 ){
               echo '</div>'.chr(10);
             }
@@ -100,13 +109,13 @@
 
       <div id="content_list" class="search" style="margin-top: 120px; clear:left;">
         <div class="redStripe">
-          <strong>ADD PICTURES</strong>
+          <strong>ADD PICTURES - 画像をクリックしてファイルを追加します</strong>
         </div>
           <? foreach ($items as $item) { ?>
           <div class="thumbBlock" id="picture_<?=$item['id']?>">
             <div class="thumbInside">
               <div class="thumb">
-                <a href="index.php?action=addPicture&archive_id=<?=h($_GET['archive_id']).'&picture_id='.$item['id'].'&page='.h($_GET['page'])?>" ><img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['id']?>"></a>
+                <a href="index.php?action=addPicture&<?=$archive_params ?>" ><img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['id']?>"></a>
               </div>
 
               <p class="metadata">

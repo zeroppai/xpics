@@ -47,6 +47,8 @@ function editArchiveAction(){
 		$page_count = 0;
 	}
 
+	$archive_params = 'archive_id='.h($_GET['archive_id']).'&picture_id='.$item['id'].'&page='.h($_GET['page']);
+
 	if(isset($_GET['archive_id']) && is_numeric($_GET['archive_id'])){
 		$archive = get('SELECT * FROM archive WHERE archive_id='.dq($_GET['archive_id']));
 		$item_list = getAll('SELECT archive_pages.page_id, picture.id, picture.image_url, picture.thumbnail_url, picture.rate FROM archive_pages'
@@ -64,6 +66,20 @@ function editArchiveAction(){
 
 		include('inc_edit_archive_list.php');
 	}
+}
+
+function saveArchiveAction(){
+	if(!isset($_SESSION['user'])) location('index.php');
+
+	put('archive',array(
+		'archive_id'=>$_POST['archive_id'],
+		'title'=>$_POST['archive_title'],
+		'tags'=>$_POST['archive_tags'],
+		'thumbnail_url'=>$_POST['archive_thumbnail'],
+		'rate'=>$_POST['rate']
+	),array('archive_id'));
+
+	location('index.php?action=editArchive&'.gu('archive_id,page'));
 }
 
 function addPictureAction(){
