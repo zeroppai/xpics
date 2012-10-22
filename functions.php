@@ -93,6 +93,7 @@ function dispHeader(){
       <div class="blackStripe clearfix" id="secondaryMenu">
         <p>
         <? if(isset($_SESSION['user']['user_id']) && $_SESSION['user']['user_id']>0 ){ ?>
+          <a href="index.php?action=newArchive"><b>New Archive</b></a> | 
           <a href="index.php?action=editArchive"><b>Edit Archive</b></a> | 
         <? } ?>
           <a href="index.php?action=upload"><b>Upload Picture</b></a> | 
@@ -102,7 +103,8 @@ function dispHeader(){
           <a href="index.php?action=login"><b>Log in</b></a>
         <? } ?>
         </p>
-<!--         <ul>
+<!--
+         <ul>
           <li><strong><a href="#">Real Amateur Porn Pictures</a></strong></li>
           <li>||</li>
           <li><a href="#">Best Of Today</a></li>
@@ -111,7 +113,8 @@ function dispHeader(){
           <li>|</li>
           <li><a href="#">Best Of 30 Days</a></li>
           <li>|</li>
-        </ul> -->
+        </ul>
+  -->
       </div>
 <!--
       <div class="redStripe redStripeBordered">

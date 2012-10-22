@@ -39,6 +39,25 @@ function archiveAction(){
 	include('inc_archive.php');
 }
 
+function newArchiveAction(){
+	include('inc_form_new_archive.php');
+}
+
+function saveNewArchiveAction(){
+	$archive_id = put('archive',array(
+		'title'=>$_POST['archive_title'],
+		'tags'=>$_POST['archive_tags'],
+		'thumbnail_url'=>$_POST['archive_thumbnail'],
+		'rate'=>'1'
+	));
+
+	if($archive_id>0){
+		location('./index.php?action=editArchive&archive_id='.$archive_id);
+	}else{
+		location('./index.php');
+	}
+}
+
 function editArchiveAction(){
 	if(!isset($_SESSION['user'])) location('index.php');
 
@@ -48,7 +67,7 @@ function editArchiveAction(){
 		$page_count = 0;
 	}
 
-	$archive_params = 'archive_id='.h($_GET['archive_id']).'&picture_id='.$item['id'].'&page='.h($_GET['page']);
+	$archive_params = 'archive_id='.h($_GET['archive_id']).'&page='.h($_GET['page']);
 
 	if(isset($_GET['archive_id']) && is_numeric($_GET['archive_id'])){
 		$archive = get('SELECT * FROM archive WHERE archive_id='.dq($_GET['archive_id']));
@@ -80,6 +99,7 @@ function saveArchiveAction(){
 		'rate'=>$_POST['rate']
 	),array('archive_id'));
 
+	$_SESSION['notice'] = '設定を保存しました'; 
 	location('index.php?action=editArchive&'.gu('archive_id,page'));
 }
 

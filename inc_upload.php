@@ -64,6 +64,9 @@ $('span.check_label').click(function(){
   $('#make_archive').attr('checked',!selected);
   $('div.archive_form').toggle();
 });
+<?
+  if(isset($_GET['action'])&&$_GET['action']==='newArchive') echo "$('span.check_label').click()";
+?>
 </script>
 <script src="./js/upload.js"></script>
 <script src="./js/filedrag.js"></script>

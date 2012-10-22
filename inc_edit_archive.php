@@ -69,7 +69,13 @@
               <button type="button" onclick="refresh()">サムネプレビュー</button>
               <button type="submit">変更保存</button>
             </div>
+            <? if(isset($_SESSION['notice'])){ ?>
+            <div class="content">
+              <label style="color:#00aa00;"><?=$_SESSION['notice'];unset($_SESSION['notice']);?></label>
+            </div>
+            <? } ?>
           </div>
+
           </form>
         </div>
 
@@ -115,7 +121,7 @@
           <div class="thumbBlock" id="picture_<?=$item['id']?>">
             <div class="thumbInside">
               <div class="thumb">
-                <a href="index.php?action=addPicture&<?=$archive_params ?>" ><img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['id']?>"></a>
+                <a href="index.php?action=addPicture&<?=$archive_params.'&picture_id='.$item['id'] ?>" ><img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['id']?>"></a>
               </div>
 
               <p class="metadata">

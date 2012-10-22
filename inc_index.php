@@ -10,9 +10,8 @@
         <div class="mozaique">
         <?
         foreach ($archives as $item) {
-              dispArchiveThumbnail($item);
-        }
-        ?>
+          dispArchiveThumbnail($item);
+        }?>
         </div>
       </div>
 
@@ -22,9 +21,9 @@
       <div id="content">
         <div class="mozaique">
         <?
-          foreach ($items as $item) {
-            dispImageThumbnail($item);
-          }
+        foreach ($items as $item) {
+          dispImageThumbnail($item);
+        }
         ?>
         </div> <!-- .mozaique -->
         
