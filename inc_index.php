@@ -4,14 +4,15 @@
       <div id="ads">
       </div> <!-- #ads -->
       <div class="redStripe">
-        <strong>NEW ARCHIVE</strong>
+        <strong>POPULAR ARCHIVE</strong>
       </div>
       <div id="content">
         <div class="mozaique">
         <?
         foreach ($archives as $item) {
           dispArchiveThumbnail($item);
-        }?>
+        }
+        ?>
         </div>
       </div>
 
