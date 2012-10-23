@@ -97,13 +97,9 @@
           <div class="items">
          <?
          foreach($item_list as $i => $item){
-            if($i%7===0){
-              echo '<div>'.chr(10);
-            }
-            echo '<a href="index.php?action=removePicture&page_id='.$item['page_id'].'&'.$archive_params.'"><img src="'.$item['thumbnail_url'].'"/></a>'.chr(10);
-            if(($i+1)%7===0 || count($item_list)<=$i+1 ){
-              echo '</div>'.chr(10);
-            }
+            if($i%7===0) echo '<div>'.chr(10);
+            echo '<a href="index.php?action=removePicture&page_id='.$item['page_id'].'&'.$archive_params.'"><img src="'.$item['thumbnail_url'].'"/></a>'.chr(10);            
+            if(($i+1)%7===0 || count($item_list)<=$i+1 ) echo '</div>'.chr(10);
           }
           ?>
           </div>
@@ -117,21 +113,28 @@
         <div class="redStripe">
           <strong>ADD PICTURES - 画像をクリックしてファイルを追加します</strong>
         </div>
+        <form action="./index.php?action=addPicture&<?=$archive_params ?>" method="POST">
           <? foreach ($items as $item) { ?>
           <div class="thumbBlock" id="picture_<?=$item['id']?>">
             <div class="thumbInside">
-              <div class="thumb">
-                <a href="index.php?action=addPicture&<?=$archive_params.'&picture_id='.$item['id'] ?>" ><img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['id']?>"></a>
+              <div class="thumb" onclick="$('input[name=picture_<?=$item['id']?>]').click();">
+                <img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['id']?>">
               </div>
 
               <p class="metadata">
                 <span class="bg">
-                  <span class="duration">Quality:<?=$item['rate']?></span>
+                  <span class="duration">Quality:<?=$item['rate']?></span><br>
+                  <input type="checkbox" name="picture_<?=$item['id']?>">
+                  <label onclick="$('input[name=picture_<?=$item['id']?>]').click();">追加する</label>
                 </span>
               </p>
             </div>
           </div>
         <? } ?>
+        <div style="text-align:center;">
+          <button type="submit">追加画像をアーカイブに保存する</button>
+        </div>
+      </form>
 
         <div class="pagination" style="clear:left;">
           <ul>

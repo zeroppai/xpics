@@ -107,10 +107,16 @@ function saveArchiveAction(){
 function addPictureAction(){
 	if(!isset($_SESSION['user'])) location('index.php');
 
-	put('archive_pages',array(
-		'archive_id'=>$_GET['archive_id'],
-		'picture_id'=>$_GET['picture_id']
-	));
+	foreach ($_POST as $key => $value) {
+		if($value==='on'){
+			$id = explode('_', $key);
+			put('archive_pages',array(
+				'archive_id'=>$_GET['archive_id'],
+				'picture_id'=>$id[1]
+			));
+		}
+	}
+
 	location('index.php?action=editArchive&'.gu('archive_id,page'));
 }
 
