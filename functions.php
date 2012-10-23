@@ -46,7 +46,7 @@ function dispHeader(){
   <meta charset="utf-8"> 
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 
-  <title>Free Porn Pictures - XVPICTS.NET</title>
+  <title>貴方の画像収集をサポートするWebサービス - XVPICTS.NET</title>
   <meta name="keywords" content="xpicts,xpicts.net, x pictures,x picture,porn,picture,pictures,">
   <meta name="description" content="XPICTS Free Porn Images free">
   
@@ -116,10 +116,11 @@ function dispHeader(){
         </ul>
   -->
       </div>
-<!--
+      <?if(!stristr($_SERVER['HTTP_USER_AGENT'],"WebKit")){?>
       <div class="redStripe redStripeBordered">
+        このサイトはWekit系のサポートのみしています。ChromeかSafariをお使いください。
 			</div>
- -->
+      <?}?>
     </header>
 <?
 }
