@@ -123,7 +123,9 @@ function addPictureAction(){
 function removePictureAction(){
 	if(!isset($_SESSION['user'])) location('index.php');
 
-	query('DELETE FROM archive_pages WHERE page_id='.dq($_GET['page_id']));
+	foreach ($_POST as $key => $value) {
+		query('DELETE FROM archive_pages WHERE page_id='.dq($key));
+	}
 
 	location('index.php?action=editArchive&'.gu('archive_id,page'));
 }
