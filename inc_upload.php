@@ -11,7 +11,6 @@ dispHeader();
         }
       });
     };
-
     $('#upload_tab').find('li').click(function(){
       var e = $(this);
       $('#upload_tab').find('li').removeClass('present');
@@ -19,6 +18,9 @@ dispHeader();
       $(e.find('a').attr('href')).css('display','block');
       init();
     });
+
+    //init
+    init();
   });
 </script>
 
@@ -29,6 +31,13 @@ dispHeader();
 #upload_tab li{
   width: 180px;
   float: left;
+}
+#beluga_upload_field textarea{
+  width:300px;
+}
+.present {
+  font-weight:700;
+  padding-right: 10px;
 }
 </style>
     <div id="main">
@@ -87,25 +96,91 @@ dispHeader();
             </fieldset>
           </form>
         </div>
+
         <div id="uplaod2">
+          <form id="upload" method="POST" enctype="multipart/form-data">
+            <div>
+              <button type="button" id="uploadButtonForBeluga">Upload Files</button>
+              <strong><a href="http://beluga.fm/room/85V9p+nfRr51E" target="_blank">Beluga.fmを開いてアップロードする</a></strong>
+              <p>Belugaでアップロードされた画像のURLをスペース区切りで入力します</p>
+            </div>
+            <div class="content">
+              <textarea id="beluga_upload_field" rows="4" cols="80"></textarea>
+            </div>
+          </form>
         </div>
-      <div id="uploadMessages"></div>
-    </div>
 
-
+        <div id="uploadMessages"></div>
+      </div> <!-- tab-wrapper -->
     </div> <!-- #main -->
-<script>
-$('span.check_label').click(function(){
-  var selected = $('#make_archive').attr('checked');
-  $('#make_archive').attr('checked',!selected);
-  $('div.archive_form').toggle();
-});
-<?
-  if(isset($_GET['action'])&&$_GET['action']==='newArchive') echo "$('span.check_label').click()";
-?>
-</script>
+
 <script src="./js/upload.js"></script>
 <script src="./js/filedrag.js"></script>
+<script type="text/javascript">
+  $('span.check_label').click(function(){
+    var selected = $('#make_archive').attr('checked');
+    $('#make_archive').attr('checked',!selected);
+    $('div.archive_form').toggle();
+  });
+  <? if(isset($_GET['action'])&&$_GET['action']==='newArchive') echo "$('span.check_label').click()"; ?>
+
+  $('#beluga_upload_field').change(function(){
+    var url_string = $(this).val();
+    var urls = url_string.split('\n');
+    var msg = $('#uploadMessages');
+    msg.html('');
+    for (var i = 0; i<urls.length; i++) {
+      if(urls[i].length>0)
+        msg.append('<img width="150" src="'+urls[i]+'"/>');
+    };
+  });
+
+  function getDataWithURL(url){
+      var fname = url.match("(.+/)(.+?)$")[2];
+      var base = url.match("(.+/)(.+?)$")[1];
+      var sname = fname.match("([a-z|A-Z|0-9]*)\.([a-z].*$)");
+
+      if(url.search(/i\.imgur\.com/)!=-1){
+        return {
+          image:{
+            name:fname
+          },
+          links:{
+            small_square:base+sname[1]+'s.'+sname[2],
+            original:url
+          }
+        };
+
+    }
+    if(url.search(/img\.beluga\.fm/)!=-1){
+        return {
+          image:{
+            name:fname
+          },
+          links:{
+            small_square:base+sname[1]+'x100.'+sname[2],
+            original:url
+          }
+        };
+
+    }
+    return null;
+  }
+
+  $('#uploadButtonForBeluga').click(function(){
+    $('#uploadMessages').find('img').each(function(){
+      var e = $(this);
+      var data = getDataWithURL(e.attr('src'));
+      if(data){
+        registImage(data);
+        $('#uploadMessages').html('<strong>アップロードに成功しました。</strong>');
+      }else{
+        //faild
+        $('#uploadMessages').html('<strong>アップロードにしました。</strong>');
+      }
+    });
+  });
+</script>
 <?
 dispFooter();
 ?>

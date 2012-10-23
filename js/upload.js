@@ -12,7 +12,7 @@ function uplaodToImgurl(data){
 		data:data,
 		success:function(msg){
 			$('#uploadMessages').html('<strong>アップロードに成功しました。</strong>');
-			registImage(msg);
+			registImage(msg.upload);
 		},
 		error:function(msg){
 			$('#uploadMessages').html('<strong>アップロードに失敗しました。</strong>');
@@ -26,10 +26,12 @@ function registImage(data){
 	$.ajax({
 		type:'POST',
 		url:'./index.php?action=uploadImage',
-		data:data.upload,
+		data:data,
 		success:function(msg){
 			console.log(msg);
-			addToArchive(archive_id,msg);
+			if(archive_id!=0){
+				addToArchive(archive_id,msg);
+			}
 		},
 		error:function(msg){
 			$('#uploadMessages').html('<strong>registerに失敗しました。</strong>');
@@ -61,6 +63,8 @@ function addToArchive(archive_id,picture_id){
 }
 
 $('#uploadButton').click(function(){
+	archive_id = 0;
+	request_count = 0;
 	//upload archive
 	if($('#make_archive').is(':checked')){
 		var data = {
