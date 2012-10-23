@@ -1,6 +1,8 @@
 <?
 dispHeader();
 ?>
+<link rel="stylesheet" href="./library/tinybox2/style.css" />
+<script type="text/javascript" src="./library/tinybox2/tinybox.js"></script>
 <script type="text/javascript">
   $(function(){
     var init = function(){
@@ -22,6 +24,26 @@ dispHeader();
     //init
     init();
   });
+
+  function popup(){
+    TINY.box.show({
+      iframe:'http://beluga.fm/room/85V9p+nfRr51E',
+      boxid:'frameless',
+      width:750,height:450,
+      fixed:false,
+      maskid:'bluemask',
+      maskopacity:40,
+      openjs:function(){
+        $('<h2 class="blackStripe" style="margin-left:-5px;padding-left:10px;">投稿前のURLをコピーしてください</h2>').appendTo('div.tbox').click(function(){
+        });
+      },
+      closejs:function(){
+        $('h2.blackStripe').remove();
+      }
+    });
+
+  };
+
 </script>
 
 <style>
@@ -101,8 +123,8 @@ dispHeader();
           <form id="upload" method="POST" enctype="multipart/form-data">
             <div>
               <button type="button" id="uploadButtonForBeluga">Upload Files</button>
-              <strong><a href="http://beluga.fm/room/85V9p+nfRr51E" target="_blank">Beluga.fmを開いてアップロードする</a></strong>
-              <p>Belugaでアップロードされた画像のURLをスペース区切りで入力します</p>
+              <strong><a id="popupBeluga" onclick="popup();">Beluga.fmを開いてアップロードする</a></strong>
+              <p>Belugaでアップロードされた画像のURLを改行区切りで入力します</p>
             </div>
             <div class="content">
               <textarea id="beluga_upload_field" rows="4" cols="80"></textarea>
@@ -116,6 +138,10 @@ dispHeader();
 
 <script src="./js/upload.js"></script>
 <script src="./js/filedrag.js"></script>
+<script type="text/javascript">
+function openJS(){alert('loaded')}
+function closeJS(){alert('closed')}
+</script>
 <script type="text/javascript">
   $('span.check_label').click(function(){
     var selected = $('#make_archive').attr('checked');
