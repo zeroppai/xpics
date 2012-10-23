@@ -100,7 +100,7 @@
             if($i%7===0){
               echo '<div>'.chr(10);
             }
-            echo '<a href="index.php?action=removePicture&'.$archive_params.'" target="_blank"><img src="'.$item['thumbnail_url'].'"/></a>'.chr(10);
+            echo '<a href="index.php?action=removePicture&page_id='.$item['page_id'].'&'.$archive_params.'"><img src="'.$item['thumbnail_url'].'"/></a>'.chr(10);
             if(($i+1)%7===0 || count($item_list)<=$i+1 ){
               echo '</div>'.chr(10);
             }

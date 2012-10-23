@@ -13,7 +13,7 @@ function defaultAction(){
 	}
 	$page_max = ceil((g('SELECT id FROM picture ORDER BY id DESC')+1)/40)-1;
 	$items = getAll('SELECT * FROM picture WHERE 1=1 ORDER BY id DESC LIMIT '.$page_count.',40');
-	$archives = getAll('SELECT * FROM archive WHERE 1=1 ORDER BY archive_id DESC LIMIT 8');
+	$archives = getAll('SELECT * FROM archive WHERE 1=1 ORDER BY date DESC LIMIT 8');
 
 	include('inc_index.php');
 }
@@ -34,7 +34,7 @@ function archiveAction(){
 		$page_count = 0;
 	}
 	$page_max = ceil((g('SELECT archive_id FROM archive ORDER BY archive_id DESC')+1)/40)-1;
-	$items = getAll('SELECT * FROM archive WHERE 1=1 ORDER BY archive_id DESC LIMIT '.$page_count.',40');
+	$items = getAll('SELECT * FROM archive WHERE 1=1 ORDER BY date DESC LIMIT '.$page_count.',40');
 
 	include('inc_archive.php');
 }
@@ -82,7 +82,7 @@ function editArchiveAction(){
 	}else{
 
 		$page_max = ceil((g('SELECT archive_id FROM archive ORDER BY archive_id DESC')+1)/40)-1;
-		$items = getAll('SELECT * FROM archive WHERE 1=1 ORDER BY archive_id DESC LIMIT '.$page_count.',40');
+		$items = getAll('SELECT * FROM archive WHERE 1=1 ORDER BY date DESC LIMIT '.$page_count.',40');
 
 		include('inc_edit_archive_list.php');
 	}
@@ -96,7 +96,8 @@ function saveArchiveAction(){
 		'title'=>$_POST['archive_title'],
 		'tags'=>$_POST['archive_tags'],
 		'thumbnail_url'=>$_POST['archive_thumbnail'],
-		'rate'=>$_POST['rate']
+		'rate'=>$_POST['rate'],
+		'date'=>date('Y-m-d H:i:s')
 	),array('archive_id'));
 
 	$_SESSION['notice'] = '設定を保存しました'; 
@@ -116,8 +117,7 @@ function addPictureAction(){
 function removePictureAction(){
 	if(!isset($_SESSION['user'])) location('index.php');
 
-	query('DELETE FROM archive_pages WHERE archive_id='.dq($_GET['archive_id'])
-		.' AND picture_id='.dq($_GET['picture_id']));
+	query('DELETE FROM archive_pages WHERE page_id='.dq($_GET['page_id']));
 
 	location('index.php?action=editArchive&'.gu('archive_id,page'));
 }
