@@ -117,6 +117,10 @@ function addPictureAction(){
 		}
 	}
 
+	$archive = get('SELECT archive_id, title, tags, thumbnail_url, rate FROM archive WHERE archive_id='.dq($_GET['archive_id']));
+	$archive['date'] = date('Y-m-d H:i:s');
+	put('archive',$archive,array('archive_id'));
+
 	location('index.php?action=editArchive&'.gu('archive_id,page'));
 }
 
@@ -126,6 +130,10 @@ function removePictureAction(){
 	foreach ($_POST as $key => $value) {
 		query('DELETE FROM archive_pages WHERE page_id='.dq($key));
 	}
+
+	$archive = get('SELECT archive_id, title, tags, thumbnail_url, rate FROM archive WHERE archive_id='.dq($_GET['archive_id']));
+	$archive['date'] = date('Y-m-d H:i:s');
+	put('archive',$archive,array('archive_id'));
 
 	location('index.php?action=editArchive&'.gu('archive_id,page'));
 }
