@@ -30,6 +30,7 @@
       <div class="redStripe">
         <strong>EDIT ARCHIVE</strong> - 基本情報設定
       </div>
+
       <div id="content" class="signInUp">
         <div class="rightCol">
           <div class="tabHeaderForm">
@@ -92,7 +93,7 @@
         </div>
       </div> <!-- #content -->
 
-      <div id="content_preview" class="preview" style="clear:left;">
+      <div id="content_preview" class="preview" style="clear:left;"> <!-- content_preview -->
         <div class="scrollPreview" style="clear:both;"> <!-- #scrollPreview -->
           <div class="redStripe">
             <strong>PREVIEW SLIDESHOW - 画像をクリックするとスライドショウから削除できます</strong>
@@ -121,39 +122,44 @@
           <!-- "next page" action -->
           <a class="next browse right"></a>
         </div><!-- #scrollPreview -->
-        <div style="text-align:center;">
-          <form id="preview_form" method="POST" action="index.php?action=removePicture&page_id='<?=$item['page_id'].'&'.$archive_params; ?>">
-            <button type="submit">選択画像をアーカイブから削除する</button>
-          <form>
-        </div>
-      </div>
 
-      <div id="content_list" class="search" style="clear:left;">
+        <div style="text-align:center;">
+          <form id="preview_form" name="preview_form" method="POST" action="index.php?action=removePicture&page_id='<?=$item['page_id'].'&'.$archive_params; ?>">
+            <button type="submit">選択画像をアーカイブから削除する</button>
+          </form>
+        </div>
+
+      </div><!-- content_preview -->
+
+      <div id="content_list" class="search" style="clear:left;"><!-- content_list -->
         <div class="redStripe">
           <strong>ADD PICTURES - 画像をクリックしてファイルを追加します</strong>
         </div>
-        <form action="./index.php?action=addPicture&<?=$archive_params ?>" method="POST">
-          <? foreach ($items as $item) { ?>
-          <div class="thumbBlock" id="picture_<?=$item['id']?>">
-            <div class="thumbInside">
-              <div class="thumb" onclick="$('input[name=picture_<?=$item['id']?>]').click();">
-                <img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['id']?>">
-              </div>
 
-              <p class="metadata">
-                <span class="bg">
-                  <span class="duration">Quality:<?=$item['rate']?></span><br>
-                  <input type="checkbox" name="picture_<?=$item['id']?>">
-                  <label onclick="$('input[name=picture_<?=$item['id']?>]').click();">追加する</label>
-                </span>
-              </p>
+        <div class="thumbnails">
+          <form id="add_form" name="add_form" action="./index.php?action=addPicture&<?=$archive_params ?>" method="POST">
+            <? foreach ($items as $item) { ?>
+            <div class="thumbBlock" id="picture_<?=$item['id']?>">
+              <div class="thumbInside">
+                <div class="thumb" onclick="$('input[name=picture_<?=$item['id']?>]').click();">
+                  <img src="<?=$item['thumbnail_url']?>" id="pic_<?=$item['id']?>" />
+                </div>
+
+                <p class="metadata">
+                  <span class="bg">
+                    <span class="duration">Quality:<?=$item['rate']?></span><br/>
+                    <input type="checkbox" name="picture_<?=$item['id']?>"/>
+                    <label onclick="$('input[name=picture_<?=$item['id']?>]').click();">追加する</label>
+                  </span>
+                </p>
+              </div>
             </div>
-          </div>
-        <? } ?>
-        <div style="text-align:center;">
-          <button type="submit">追加画像をアーカイブに保存する</button>
+            <? } ?>
+            <div style="text-align:center;">
+              <input type="button" value="追加画像をアーカイブに保存する" onclick="form.submit();"/>
+            </div>
+          </form>
         </div>
-      </form>
 
         <div class="pagination" style="clear:left;">
           <ul>
@@ -174,7 +180,9 @@
           ?>
           </ul>
         </div>
-      </div> <!-- #content -->
+
+      </div> <!-- content_list -->
+
     </div> <!-- #main -->
 
     <? dispPopCategory(); ?>
