@@ -118,7 +118,7 @@ function dispHeader(){
       </div>
       <?if(!stristr($_SERVER['HTTP_USER_AGENT'],"WebKit")){?>
       <div class="redStripe redStripeBordered">
-        このサイトはWebkit系のサポートのみしています。ChromeかSafariをお使いください。
+        このサイトはWebkit系のサポートのみしています。ChromeかSafari以外だとうまく表示されない場合があります。
 			</div>
       <?}?>
     </header>
