@@ -1,0 +1,210 @@
+/* =============================================================================
+   STYLES FOR VIDEO PAGE
+============================================================================= */
+
+/* ==== VIDEO: HEADER ==== */
+h2 {
+	font-size: 22px;
+	line-height: 28px;
+	font-weight: bold;
+	margin: 4px 0 0;
+}
+h2 .duration { font-weight: normal; }
+h2 .profile_name { font-weight: normal; }
+h2 .profile_name a, h2 .profile_name a:visited,
+#main #video-tags li.profile_name a, #main #video-tags li.profile_name a:visited {
+	color: #f00;
+	font-weight: bold;
+	text-decoration: underline;
+}
+#main #video-tags { margin: 0 0 10px; font-size: 13px; }
+#main #video-tags li { display: inline; }
+#main #video-tags li a { text-decoration: none; }
+#main #video-tags li a:hover { text-decoration: underline; }
+
+/* ==== VIDEO: PLAYER, CHANNEL, AD ==== */
+#main #video-ad {
+	float: right;
+	width: 338px;
+	text-align: center;
+}
+#main #channel {
+	margin: 0 0 10px;
+	width: 564px;
+	background-color: #eeedf1;
+	border: 1px solid #aaa;
+	padding: 6px 8px;
+	font-size: 18px;
+	line-height: 24px;
+}
+#adChannel {
+	text-align: center;
+	font-size: 14px;
+	font-weight: bold;
+	overflow: hidden;
+	padding: 4px 8px;
+	background: #000;
+	color: #FFF;	
+}
+#adChannel a { color: #fff; text-decoration: underline; }
+#adChannel .channel_desc {
+	font-size: 13px;
+	font-weight: normal;
+}
+#main #player {
+	width: 588px;
+	overflow: hidden;
+	line-height: 0;
+}
+
+/* ==== VIDEO: TABS ==== */
+#videoTabs {
+	margin: 5px 0 0;
+	clear: both;
+}
+
+/* ==== VIDEO: COMMENTS ==== */
+#tabComments div#commentForm .leftCol {
+	width: 90px;
+	text-align: center;
+	padding-top: 3px;
+}
+#tabComments div#commentForm .leftCol div {
+	margin-top: 23px;
+	padding: 4px 8px;
+	font-size: 11px;
+}
+#tabComments div#commentForm p {
+	font-size: 14px;
+	margin:  0 0 8px 2px;
+}
+#tabComments div#commentForm.noLoginReq p {
+	font-size: 13px;
+	text-align: left;
+	line-height: 22px;
+}
+#tabComments div#commentForm.noLoginReq .leftCol { width: 100px; }
+#tabComments div#commentForm.noLoginReq .leftCol div { margin-top: 20px; }
+#tabComments div#commentForm textarea {
+	width: 97%;
+	padding: 4px;
+}
+#tabComments .comment {
+	padding: 10px 0;
+	margin: 0 4px;
+	overflow: hidden;
+	border-bottom: 1px solid #CCCCCC;
+	border-top: 1px solid #FFFFFF;
+}
+#tabComments .comment:first-child { border-top: none; }
+#tabComments .comment .comment_profilepic {
+	float: left;
+	padding-right: 10px;
+	width: 52px;
+	height: 52px;
+}
+#tabComments .comment .comment_profilepic img {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #000;
+}
+#tabComments .comment .comment_user {
+	font-size: 12px;
+	border: 1px solid #000;
+	background: #dadad9;
+	padding: 1px 6px;
+	margin: 0 0 6px 0;
+	overflow: hidden;
+	font-weight: normal;
+}
+#tabComments .comment .comment_date { display: inline; }
+#tabComments .comment .comment_comment { overflow: hidden; }
+#tabComments .pagination {
+	margin: 0 4px;
+	padding-top: 20px;
+	border-top: 1px solid #FFFFFF;
+}
+
+/* ==== VIDEO: FAVORITES ==== */
+#tabFavs { font-size: 14px; }
+#tabFavs #addToFavoritesForm { margin: 20px 10px 0 }
+#tabFavs input[type="text"], #tabFavs input[type="button"], #tabFavs select { margin: 0 6px; }
+#favLists input[type="radio"] {
+	vertical-align: text-top;
+	margin-right: 4px;
+}
+#favLists span,
+#favLists a.button { display: none; }
+#favLists strong {
+	font-weight: normal;
+	color: #f00;
+	padding-left: 20px;
+	font-size: 12px;
+}
+#favLists .alreadyInList { color: #444; }
+#favLists .alreadyInList span {
+	padding-left: 20px;
+	font-size: 12px;
+	display: inline;
+}
+#favLists .alreadyInList a.button {
+	color: #444444;
+	font-size: 12px;
+	padding: 0 6px;
+	margin: 0 2px;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+#favLists .alreadyInList a.button:hover { color: #fff; }
+#tabFavs #addToFavoritesForm .formActions { margin-top: 10px; }
+#tabFavs .vsep { margin: 15px 10px 0; }
+
+/* ==== VIDEO: SHARE, EMBED ==== */
+#tabShare #shareButtons {
+	margin: 20px auto 0;
+	width: 500px;
+}
+#tabEmbed #mediaEmbedCodeInput {
+	font-size: 14px;
+	margin: 20px 0 0;
+	padding: 2px 8px;
+	width: 96%;
+}
+
+/* ==== VIDEO: RELATED ==== */
+#relatedVideos {
+	margin-top: 20px;
+	overflow: hidden;
+	*zoom: 1;
+}
+#relatedVideos .thumbBlock {
+	width: 20%;
+	border: none;
+	background: none;
+}
+#relatedVideosWithMore {
+	position: relative;
+	height: 390px;
+	margin-top: 20px;
+	overflow: hidden;
+	*zoom: 1;
+}
+#relatedVideosWithMore .page {
+	position: absolute;
+	width: 100%;
+	top: 100%;
+	left: 0;
+}
+#relatedVideosWithMore .thumbBlock {
+	width: 20%;
+	border: none;
+	background: none;
+}
+#relatedVideosMoreLink {
+	text-align: center;
+}
+#relatedVideosMoreLink a {
+	font-weight: bold;
+	font-size: 15px;
+}

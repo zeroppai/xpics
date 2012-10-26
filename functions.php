@@ -57,7 +57,6 @@ function dispHeader(){
   <link rel="stylesheet" type="text/css" media="all" href="./js/html5_styles.css" />
 
   <script src="./js/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="http://static.xvideos.com/v2/js/libs/jquery-1.7.2.min.js"><\/script>')</script>
 
   <script src="./js/jquery.tools.min.js"></script>
   <script type="text/javascript" src="./js/jquery.blockUI.js"></script>
@@ -116,18 +115,6 @@ function dispHeader(){
           <a href="index.php?action=login"><b>Log in</b></a>
         <? } ?>
         </p>
-<!--
-         <ul>
-          <li><strong><a href="#">Real Amateur Porn Pictures</a></strong></li>
-          <li>||</li>
-          <li><a href="#">Best Of Today</a></li>
-          <li>|</li>
-          <li><a href="#">Best Of 7 Days</a></li>
-          <li>|</li>
-          <li><a href="#">Best Of 30 Days</a></li>
-          <li>|</li>
-        </ul>
-  -->
       </div>
       <?if(!stristr($_SERVER['HTTP_USER_AGENT'],"WebKit")){?>
       <div class="redStripe redStripeBordered">

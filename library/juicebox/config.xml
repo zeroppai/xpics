@@ -12,9 +12,11 @@ if(isset($params['archive_id']) && $params['archive_id']>0){
 }else{
   $items = getAll('SELECT * FROM picture WHERE id<='.dq($params['id']).' ORDER BY id DESC LIMIT 100');
 }
-?>
-<xml version="1.0" encoding="UTF-8">
 
+//header
+header('Content-Type:application/xml');
+echo '<?xml version="1.0" encoding="UTF-8" ?>'.chr(10);
+?>
 <juiceboxgallery 
 	galleryTitle=""
 	useFlickr="false"
