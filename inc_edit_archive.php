@@ -1,5 +1,5 @@
 <? dispHeader(); ?>
-<link rel="stylesheet" href="./js/xv-archive-styles.css"/>
+<link rel="stylesheet" href="./css/xv-archive-styles.css"/>
 <script>
   $(function() {
     // initialize scrollable

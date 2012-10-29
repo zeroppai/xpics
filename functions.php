@@ -52,9 +52,9 @@ function dispHeader(){
   
   <link rel="search" type="application/opensearchdescription+xml" title="XPicts" href="http://beluga.fm"/>
   <link rel="shortcut icon" href="./img/favicon_xvideos.ico"/>
-  <link rel="stylesheet" href="./js/xv-styles.css"/>
-  <link rel="stylesheet" href="./js/xv-account-styles.css"/>
-  <link rel="stylesheet" type="text/css" media="all" href="./js/html5_styles.css" />
+  <link rel="stylesheet" href="./css/xv-styles.css"/>
+  <link rel="stylesheet" href="./css/xv-account-styles.css"/>
+  <link rel="stylesheet" type="text/css" media="all" href="./css/html5_styles.css" />
 
   <script src="./js/jquery.min.js"></script>
 

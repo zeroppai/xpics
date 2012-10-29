@@ -1,5 +1,5 @@
 <? dispHeader(); ?>
-<link rel="stylesheet" href="./js/xv-viewer-styles.css"/>
+<link rel="stylesheet" href="./css/xv-viewer-styles.css"/>
 <div id="main">
 
   <h2><?
