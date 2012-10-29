@@ -1,0 +1,42 @@
+/* =============================================================================
+	Mobile style
+   ========================================================================== */
+@media screen and (max-device-width:480px) {
+	.clearfix::before {
+		margin: 0px 0px 0px 0px;
+	}
+
+	header img#siteLogo {
+		height: 40px;
+		float: bottom;
+	}
+
+	.whiteStripe, .clearfix h2 {
+		margin: 0px 10px;
+		font-size: 14px;
+    	/*display: none;*/
+	}
+
+	#social {
+    	display: none;
+	}
+
+	#searchForm #q{
+    	width: 60%;
+	}
+
+	#searchForm #searchSubmit{
+    	width: 30%;
+	}
+
+    #mainMenu p{
+    	display: none;
+    }
+
+    #page {
+    	max-width: 100%;
+    }
+
+    .thumbBlock {
+    	width: 33%;
+    }

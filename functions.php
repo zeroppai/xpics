@@ -49,10 +49,12 @@ function dispHeader(){
   <title>貴方の画像収集をサポートするWebサービス - XVPICTS.NET</title>
   <meta name="keywords" content="xpicts,xpicts.net, x pictures,x picture,porn,picture,pictures,">
   <meta name="description" content="XPICTS Free Porn Images free">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0" />
   
   <link rel="search" type="application/opensearchdescription+xml" title="XPicts" href="http://beluga.fm"/>
   <link rel="shortcut icon" href="./img/favicon_xvideos.ico"/>
   <link rel="stylesheet" href="./css/xv-styles.css"/>
+  <link rel="stylesheet" href="./css/xv-styles-mobile.css"/>
   <link rel="stylesheet" href="./css/xv-account-styles.css"/>
   <link rel="stylesheet" type="text/css" media="all" href="./css/html5_styles.css" />
 
