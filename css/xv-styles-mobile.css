@@ -7,12 +7,13 @@
 	}
 
 	header img#siteLogo {
-		height: 40px;
+		width: 150px;
+		height: 45px;
 		float: bottom;
 	}
 
 	.whiteStripe, .clearfix h2 {
-		margin: 0px 10px;
+		margin: 5px 0px 0px 0px;
 		font-size: 14px;
     	/*display: none;*/
 	}
@@ -22,6 +23,8 @@
 	}
 
 	#searchForm #q{
+		margin: 0px 0px 0px 0px;
+		padding-right: 10px;
     	width: 60%;
 	}
 
@@ -40,3 +43,8 @@
     .thumbBlock {
     	width: 33%;
     }
+
+    li#tabVote {
+    	padding-bottom: 20px;
+    }
+}
