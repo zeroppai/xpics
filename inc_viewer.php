@@ -33,7 +33,8 @@
             galleryWidth:'588',
             galleryHeight:'476',
             themeUrl:'library/juicebox/jbcore/classic/theme.css',
-            baseURL:'library/juicebox/'
+            baseURL:'library/juicebox/',
+            configUrl:'config.php'
         });
         </script>
 
